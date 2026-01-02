@@ -1,0 +1,25 @@
+/* draggable divs */
+
+.draggable {
+    height: max-content;
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 100;
+    background: var(--gray);
+    border: 2px outset;
+}
+
+.draggable-header {
+    z-index: 101;
+    cursor: move;
+    padding: 4px;
+    border-bottom: 2px outset;
+}
+
+.draggable-body {
+    border: 2px inset;
+    margin: 1px;
+}

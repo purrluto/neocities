@@ -1,0 +1,28 @@
+{% extends main.njk %}
+
+{% block draggable %}
+<div class="nodisplay draggable" style="top: {{ top }}; bottom: {{ btm }}; right: {{ rt }}; left: {{ lft }}; width: {{ width }}; height: {{ height }};">
+    <div class="top draggable-header">
+        {{ header }}
+        <button class="min-button">_</button>
+    </div>
+    <div class="draggable-body">
+        {{ body }}
+    </div>
+</div>
+{% endblock %}
+
+{% block two-col %}
+<div id="main" class="two-cols">
+    <header-bar link=""></header-bar>
+    <div id="sidebar">
+        {{ sidebar }}
+    </div>
+    <div id="content">
+        {{ content }}
+    </div>
+</div>
+{% endblock %}
+
+{% block one-col %}
+{% endblock %}

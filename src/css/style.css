@@ -1,0 +1,352 @@
+/*
+main css page! this is used for all the central pages on the site.
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=ZCOOL+QingKe+HuangYou&display=swap');
+
+:root {
+    --purple: #36004A;
+    --magenta: #5B2143;
+    --gray: #c0c0c0;
+    --lightgray: #eaeaea;
+    --pink: #ffd5fe;
+    --lowpink: #ffc4fe9e;
+    --lilac: #a392ac;
+    --darklilac: #876e96;
+
+    scrollbar-color: var(--pink) var(--purple);
+    scrollbar-width: thin;
+}
+
+body, html {
+    height: 100vh;
+    background: url('https://i.pinimg.com/originals/3a/0b/40/3a0b40d96c53860572a1c29970ce14a8.gif') center center repeat, black;
+    font-family: Verdana, Arial, sans-serif;
+    overflow: hidden;
+}
+
+body {
+    margin: 0;
+    font-size: .9rem;
+}
+
+#main {
+    height: 90vh;
+    width: 100%;
+    box-sizing: border-box;
+    max-width: 768px;
+    position: relative;
+    margin: auto;
+    margin-top: 5vh;
+    display: grid;
+    background: var(--gray);
+    border: 2px outset;
+    overflow: hidden;
+}
+
+.two-cols {
+    grid-template-rows: 6rem 1fr;
+    grid-template-columns: 0.5fr 1fr;
+    grid-template-areas:
+        "header header"
+        "sidebar content";
+}
+
+.one-cols {
+    grid-template-rows: 6rem 1fr;
+    grid-template-areas:
+        "header"
+        "content";
+}
+
+header-bar {
+    grid-area: header;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 2px groove var(--lightgray);
+}
+
+.top {
+    flex-grow: 0;
+    padding: 4px;
+    background: linear-gradient(to right, var(--purple), var(--magenta));
+    color: white;
+    border: 2px inset;
+}
+
+header-bar button, .draggable button, .btn {
+    box-sizing: border-box;
+    border-radius: 0;
+    border: 2px outset;
+    background: var(--lightgray);
+    height: fit-content;
+}
+
+.top button {
+    position: absolute;
+    right: 6px;
+}
+
+.dummy {
+    margin: 0px 4px;
+    padding: 0px 4px;
+    flex-grow: 2;
+    border-bottom: 2px groove var(--lightgray);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.address-cont {
+    display: flex;
+    align-items: center;
+    gap: .3rem;
+    max-height: 1rem;
+    position: relative;
+    width: 60%;
+}
+
+#address {
+    flex-grow: 1;
+    min-height: 1rem;
+    max-height: 1rem;
+    background: white;
+    border: 1px solid black;
+    padding: 2px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+#lg {
+    color: var(--gray);
+}
+
+nav {
+    margin: 4px;
+    margin-bottom: 0;
+    flex-grow: 1;
+    padding:4px;
+    padding-bottom: 0px;
+}
+
+nav a {
+    border-radius: 4px 4px 0px 0px;
+    padding: 4px;
+    background: var(--lightgray);
+    border: 2px outset white;
+    border-bottom: none !important;
+}
+
+nav a:hover, header-bar button:hover, .draggable button:hover {
+    background: var(--lilac);
+    border-style: inset;
+    border-color: var(--darklilac);
+}
+
+#sidebar {
+    grid-area: sidebar;
+    background: linear-gradient(#36004ad6, #5b2143c4), url('../graphics/spacebgupscale.png') fixed center center;
+    padding: 10px;
+    margin: 0.4rem;
+    border: 4px double var(--lowpink);
+    color: var(--pink);
+    overflow-y: auto;
+}
+
+#content {
+    position: relative;
+    grid-area: content;
+    display: flex;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    background: linear-gradient(#36004ad6, #5b2143c4), url('../graphics/spacebgupscale.png') fixed center center;
+    padding: 0.4rem;
+    margin: 0.4rem;
+    border: 4px double var(--lowpink);
+    color: var(--pink);
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.about {
+    position: relative;
+    width: 100%;
+}
+
+#pfp {
+    display: block;
+    margin: 0 0 0.4rem 0.4rem;
+    border: 1px solid var(--lowpink);
+    max-width: 250px;
+    float: right;
+}
+
+#todo {
+    padding-left: 1.5em;
+}
+
+#todo li {
+    margin-top: 1em;
+}
+
+a {
+    color: var(--purple);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline dashed 1px;
+}
+
+.center {
+    text-align: center;
+}
+
+.left {
+    text-align: left;
+}
+
+.right {
+    text-align: right;
+}
+
+h1 {
+    font-size: 1.5rem;
+}
+
+h2 {
+    font-size: 1.2rem;
+}
+
+h3 {
+    font-size: 1rem;
+}
+
+.i {
+    font-style: italic;
+}
+
+@media(max-width: 768px) {
+    body, html {
+        overflow: auto;
+    }
+    
+    #main {
+        margin: 0;
+        height: 100vh;
+    }
+
+    .two-cols {
+        grid-template-columns: 1fr;
+        grid-template-rows: 6rem 0.7fr 0.3fr;
+        grid-template-areas: 
+            "header"
+            "content"
+            "sidebar";
+    }
+
+    #pfp {
+        float: none;
+        margin: auto;
+    }
+
+    .nodisplay {
+        display: none !important;
+    }
+}
+
+/* dropdown menu */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-select {
+    position: absolute;
+    display: flex;
+    flex-flow: column wrap;
+    right: 0;
+    z-index: 10;
+    background-color: var(--lightgray);
+    border: 2px outset;
+    box-shadow: -2px 2px 2px #876e96a2;
+    width: 125px;
+    padding: 0px 2px;
+    overflow: hidden;
+}
+
+.dropdown-select span {
+    font-size: 12px;
+    font-style: italic;
+}
+
+.dropdown-item {
+    display: block;
+    flex-grow: 1;
+    padding: 2px;
+    border: 2px solid transparent;
+    border-bottom: 1px groove var(--gray) !important;
+    font-size: 12px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.dropdown-item:hover {
+    background-color: var(--lilac);
+    border: 2px inset;
+    text-decoration: none;
+}
+
+.init-hid {
+    display: none;
+}
+
+/* BANNER + ANIMATION FOR IT */
+
+.banner {
+    background: url('../graphics/speen.gif') center right no-repeat, linear-gradient(135deg, #0e0549 0%,#632989 20%,#9b24bf 43%,#ba23b0 60%,#ff898b 100%);
+    padding: 4px;
+    border: 3px double #0e0549;
+    text-align: center;
+    overflow: hidden;
+    color: white;
+    font-family: 'ZCOOL QingKe HuangYou', sans-serif;
+    box-sizing: border-box;
+    height: fit-content;
+    width: 100%;
+  }
+  
+  .banner h1 {
+    font-size: 330%;
+    margin: -7px;
+    white-space: nowrap;
+  }
+  
+  #scroll-text {
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    
+    -moz-animation: my-animation 15s linear infinite;
+    -webkit-animation: my-animation 15s linear infinite;
+    animation: my-animation 15s linear infinite;
+    
+    width: fit-content;
+  }
+  
+  @keyframes my-animation {
+    from { transform: translateX(100%); }
+    to { transform: translateX(-100%); }
+  }
+
+  @-moz-keyframes my-animation {
+    from { -moz-transform: translateX(100%); }
+    to { -moz-transform: translateX(-100%); }
+  }
+  
+  @-webkit-keyframes my-animation {
+    from { -webkit-transform: translateX(100%); }
+    to { -webkit-transform: translateX(-100%); }
+  }
