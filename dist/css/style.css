@@ -161,7 +161,7 @@ nav a:hover, header-bar button:hover, .draggable button:hover {
     gap: 0.4rem;
     flex-wrap: wrap;
     align-content: flex-start;
-    background: linear-gradient(#36004ad6, #5b2143c4), url('../graphics/spacebgupscale.png') fixed center center;
+    background: linear-gradient(#36004ad6, #5b2143c4), url('../assets/img/bg_main.png') fixed center center;
     padding: 0.4rem;
     margin: 0.4rem;
     border: 4px double var(--lowpink);
@@ -306,7 +306,7 @@ h3 {
 /* BANNER + ANIMATION FOR IT */
 
 .banner {
-    background: url('../graphics/speen.gif') center right no-repeat, linear-gradient(135deg, #0e0549 0%,#632989 20%,#9b24bf 43%,#ba23b0 60%,#ff898b 100%);
+    background: url('../assets/img/banner_spin.gif') center right no-repeat, linear-gradient(135deg, #0e0549 0%,#632989 20%,#9b24bf 43%,#ba23b0 60%,#ff898b 100%);
     padding: 4px;
     border: 3px double #0e0549;
     text-align: center;

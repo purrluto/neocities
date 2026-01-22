@@ -1,0 +1,10 @@
+[
+    {"desc": "move to a static site gen", "complete": true},
+    {"desc": "make the folder + star bits in the header have an actual dropdown (for other socials/friends)", "complete": true},
+    {"desc": "make gallery page.", "complete": false},
+    {"desc": "draft setup for other pages.", "complete": false},
+    {"desc": "add guestbook.", "complete": true},
+    {"desc": "rework about text.", "complete": true},
+    {"desc": "add lots of fun graphics!", "complete": false},
+    {"desc": "maybe add a journal section?", "complete": false}
+]

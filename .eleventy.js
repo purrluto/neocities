@@ -9,8 +9,8 @@ module.exports = eleventyConfig => {
   eleventyConfig.addPassthroughCopy("src", {
 		//debug: true,
 		filter: [
-			"**/*.css",
-			"**/*.js",
+			"css/*.css",
+			"scripts/*.js",
 		]
 	});
 

@@ -30,7 +30,7 @@ class Header extends HTMLElement {
                     <div class="dropdown-select init-hid">
                         <span>other socials:</span>
                         <a class="dropdown-item" target="_blank" href="https://www.youtube.com/@purrluto">🖤 my youtube!</a>
-                        <a class="dropdown-item" target="_blank" href="https://www.tiktok.com/@purrlut0">♠️ my tiktok!</a>
+                        <a class="dropdown-item" target="_blank" href="https://www.tiktok.com/@purrluto">♠️ my tiktok!</a>
                         <a class="dropdown-item" target="_blank" href="https://purrluto.tumblr.com/">❤️ my main tumblr!</a>
                         <a class="dropdown-item" target="_blank" href="https://plutonex.tumblr.com/">💛 my art tumblr!</a>
                         <a class="dropdown-item" target="_blank" href="https://bsky.app/profile/purrluto.bsky.social">💙 my bluesky!</a>
