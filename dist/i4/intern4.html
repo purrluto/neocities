@@ -5,8 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="purrluto">
         <meta name="description" content="[RESTRICTED ACCESS.]">
-        <title>{{ title }}</title>
-        <link href="../css/intern.css{{ nocache }}" rel="stylesheet">
+        <title>Parapop TV Employee Portal</title>
+        <link href="../css/intern.css?nocache=1769447967155" rel="stylesheet">
         <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
         <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
     </head>
@@ -18,38 +18,67 @@
                 <summary>Observations</summary>
                 <div>
                 <p>Reports on Pluto's behavior.</p>
-                {% for report in i4reports %}
-                    <p class="title">{{ report.title }}</p>
+                
+                    <p class="title">01/26</p>
                     <div class="desc">
-                        {% for para in report.desc %}
-                            <p>{{ para }}</p>
-                        {% endfor %}
+                        
+                            <p>sentence1</p>
+                        
+                            <p>sentence2</p>
+                        
                         <p class="subtitle">Notable Events:</p>
                         <ul>
-                        {% for event in report.events %}
-                            <li>{{ event }}</li>
-                        {% else %}
-                            <li>Nothing notable.</li>
-                        {% endfor %}
+                        
+                            <li>event1</li>
+                        
+                            <li>event2</li>
+                        
                         </ul>
                         <p class="subtitle">Relationships:</p>
                         <ul>
-                        {% for event in report.events %}
-                            <li>{{ event }}</li>
-                        {% else %}
-                            <li>No significant developments.</li>
-                        {% endfor %}
+                        
+                            <li>event1</li>
+                        
+                            <li>event2</li>
+                        
                         </ul>
                         <p class="subtitle">Notable Events:</p>
                         <ul>
-                        {% for event in report.events %}
-                            <li>{{ event }}</li>
-                        {% else %}
-                            <li>Nothing notable.</li>
-                        {% endfor %}
+                        
+                            <li>event1</li>
+                        
+                            <li>event2</li>
+                        
                         </ul>
                     </div>
-                {% endfor %}
+                
+                    <p class="title">01/26</p>
+                    <div class="desc">
+                        
+                            <p>sentence1</p>
+                        
+                            <p>sentence2</p>
+                        
+                        <p class="subtitle">Notable Events:</p>
+                        <ul>
+                        
+                            <li>Nothing notable.</li>
+                        
+                        </ul>
+                        <p class="subtitle">Relationships:</p>
+                        <ul>
+                        
+                            <li>No significant developments.</li>
+                        
+                        </ul>
+                        <p class="subtitle">Notable Events:</p>
+                        <ul>
+                        
+                            <li>Nothing notable.</li>
+                        
+                        </ul>
+                    </div>
+                
                 </div>
             </details>
             <details name="page" style="--n: 2">
