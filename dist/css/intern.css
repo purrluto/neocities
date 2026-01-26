@@ -10,24 +10,30 @@ maybe a fun border at the bottom
 body {
     background: var(--gray);
     margin: 0;
+    box-sizing: border-box;
 }
 
 .topbar {
     position: absolute;
     width: 100%;
-    height: 1rem;
+    height: 2rem;
     padding: .5rem;
     top: 0;
     background: black;
     color: white;
+    box-sizing: border-box;
 }
 
 .topbar > .rhs {
     float: right;
 }
 
+.topbar .name {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
 .main {
-    background: white;
     margin: auto;
     height: 90vh;
     max-width: 768px;
@@ -36,8 +42,9 @@ body {
     margin-top: 10vh;
     border-radius: 1rem 1rem 0 0;
     overflow: clip;
-    box-shadow: 2px 2px 0px black;
-    border: 1px black solid;
+    background: pink;
+    box-sizing: border-box;
+    padding: 1rem;
 }
 
 /* from css-tricks! */
@@ -46,6 +53,7 @@ body {
 rows are for tabs and second is displaying active tab panel
 column gap is for space between tabs */
 .details {
+    height: 100%;
     display:grid;
     grid-template-columns: repeat(4, minmax(100px, 1fr));
     grid-template-rows: auto 1fr;
@@ -54,6 +62,7 @@ column gap is for space between tabs */
 
 /* use subgrid to use the divisions from before */
 details {
+    height: 100%;
     display: grid;
     grid-template-columns: subgrid;
     grid-template-rows: subgrid;
@@ -78,6 +87,8 @@ details::details-content {
     grid-row: 2;
     grid-column: 1 / -1;
     padding: 1rem;
+    height: 100%;
+    z-index: 1;
 }
 
 details:not([open])::details-content {
@@ -101,7 +112,7 @@ details:nth-of-type(4) summary {
 
 /* end of css from css-tricks */
 
-/* summary body styling */
+/* rest of styling styling */
 p {
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -124,4 +135,22 @@ p.subtitle {
 
 .desc ul {
     margin-top: 0rem;
+}
+
+details::details-content {
+    height: 100%;
+    overflow-y: auto !important;
+    background: white;
+}
+
+details summary {
+    text-align: center;
+    text-transform: uppercase;
+    background: lightblue;
+    border-bottom: none;
+    border-radius: 1rem 1rem 0 0;
+}
+
+details:not([open]) summary {
+    background: var(--gray);
 }
