@@ -13,6 +13,7 @@
     <body>
         <!-- top bar -->
         <div class="topbar">
+            <img src="../assets/img/parapoplogo.png" height="50px" width="50px"/>
             <span class="lhs">Welcome back, <span class="name">Intern 4.</span></span>
             <span class="rhs">Logout</span>
         </div>
@@ -26,9 +27,13 @@
                         <p><b>{{ chat.name }}</b> <span class="datetime">{{ chat.date }}, {{ chat.time }}</span></p>
                         <p>{{ chat.msg }}</p>
                     </div>
+                    {% if chat.newday %}
+                    <div class="divider">- {{ chat.date }} -</div>
+                    {% endif %}
                 {% else %}
                     <p>FAILED TO FETCH</p>
                 {% endfor %}
+                <div class="divider">Beginning of messages.</div>
             </div>
         </div>
 
