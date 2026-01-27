@@ -272,3 +272,9 @@ span.datetime {
     color: var(--gray);
     padding: 0.5rem;
 }
+
+/* login page */
+
+body .login {
+    background: black !important;
+}
