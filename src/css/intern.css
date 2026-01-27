@@ -7,6 +7,30 @@ maybe a fun border at the bottom
     --gray: #b7b7b7;
 }
 
+@font-face {
+    font-family: 'Pixellari';
+    src: url('../assets/fonts/Pixellari.ttf') format('truetype'); /* Safari, Android, iOS */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-family: 'Dogica';
+    src: url('../assets/fonts/dogicapixel.ttf') format('truetype'); /* Safari, Android, iOS */
+    font-style: normal;
+    font-weight: 100 200;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-family: 'Dogica Bold';
+    src: url('../assets/fonts/dogicapixelbold.ttf') format('truetype'); /* Safari, Android, iOS */
+    font-style: normal;
+    font-weight: bold;
+    text-rendering: optimizeLegibility;
+}
+
 body {
     background: var(--gray);
     margin: 0;
@@ -22,6 +46,7 @@ body {
     background: black;
     color: white;
     box-sizing: border-box;
+    font-family: 'Pixellari', sans-serif;
 }
 
 .topbar > .rhs {
@@ -119,9 +144,9 @@ p {
 }
 
 p.title {
-    font-size: 2rem;
+    font-size: 1rem;
     font-weight: bold;
-    margin-bottom: 0rem;
+    margin-bottom: .7rem;
 }
 
 .desc > p:first-of-type {
@@ -129,8 +154,8 @@ p.title {
 }
 
 p.subtitle {
-    font-size: 1.1rem;
-    margin-bottom: 0rem;
+    font-size: .75rem;
+    margin-bottom: .5rem;
 }
 
 .desc ul {
@@ -138,12 +163,15 @@ p.subtitle {
 }
 
 details::details-content {
+    font-family: 'Dogica', sans-serif;
+    font-size: .5rem;
     height: 100%;
     overflow-y: auto !important;
     background: white;
 }
 
 details summary {
+    font-family: 'Pixellari', sans-serif;
     text-align: center;
     text-transform: uppercase;
     background: lightblue;
@@ -151,6 +179,58 @@ details summary {
     border-radius: 1rem 1rem 0 0;
 }
 
+details[open] summary {
+    text-decoration: underline wavy;
+}
+
 details:not([open]) summary {
     background: var(--gray);
+}
+
+/* chatbox */
+
+.chatbox {
+    position: absolute;
+    width: 250px;
+    bottom: 0;
+    right: 5%;
+    background: white;
+    box-sizing: border-box;
+    z-index: 3;
+    padding: 0.5rem;
+    padding-bottom: 0;
+    background: pink;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.chatbox > .header {
+    background: pink;
+    font-family: 'Pixellari', sans-serif;
+    box-sizing: border-box;
+    padding: .5rem;
+    text-transform: uppercase;
+}
+
+.chatbox > .chats {
+    font-family: 'Dogica', sans-serif;
+    height: 35vh;
+    background: white;
+    overflow: auto;
+}
+
+.chatbox > .chats p {
+    margin: 0;
+    font-size: 0.5rem;
+}
+
+span.datetime {
+    color: var(--gray);
+}
+
+.chatbox > .chats > .fullmsg {
+    padding: 0.5rem;
+}
+
+.chatbox > .chats > .fullmsg:nth-child(even) {
+    background: rgba(0, 0, 0, 0.05);
 }

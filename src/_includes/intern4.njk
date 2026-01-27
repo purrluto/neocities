@@ -17,6 +17,21 @@
             <span class="rhs">Logout</span>
         </div>
 
+        <!-- chatbox -->
+        <div class="chatbox">
+            <div class="header">Communications (O9)</div>
+            <div class="chats">
+                {% for chat in i4chats %}
+                    <div class="fullmsg">
+                        <p><b>{{ chat.name }}</b> <span class="datetime">{{ chat.date }}, {{ chat.time }}</span></p>
+                        <p>{{ chat.msg }}</p>
+                    </div>
+                {% else %}
+                    <p>FAILED TO FETCH</p>
+                {% endfor %}
+            </div>
+        </div>
+
         <!-- primary -->
         <div class="main">
             <div class="details">
@@ -40,36 +55,20 @@
                         </ul>
                         <p class="subtitle">Relationships:</p>
                         <ul>
-                        {% for event in report.events %}
-                            <li>{{ event }}</li>
+                        {% for rel in report.rels %}
+                            <li>{{ rel }}</li>
                         {% else %}
                             <li>No significant developments.</li>
                         {% endfor %}
                         </ul>
-                        <p class="subtitle">Notable Events:</p>
+                        <p class="subtitle">Additional Notes:</p>
                         <ul>
-                        {% for event in report.events %}
-                            <li>{{ event }}</li>
+                        {% for note in report.notes %}
+                            <li>{{ note }}</li>
                         {% else %}
                             <li>Nothing notable.</li>
                         {% endfor %}
                         </ul>
-                        <p>foo</p>
-                        <p>foo</p>
-                        <p>foo</p>
-                        <p>foo</p>
-                        <p>foo</p>
-                        <p>foo</p>
-                        <p>foo</p>
-                        <p>foo</p>
-                        <p>foo</p>
-                        <p>foo</p>
-                        <p>foo</p>
-                        <p>foo</p>
-                        <p>foo</p>
-                        <p>foo</p>
-                        <p>foo</p>
-                        <p>foo</p>
                     </div>
                 {% endfor %}
                 </div>
