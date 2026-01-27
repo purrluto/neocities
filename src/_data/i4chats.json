@@ -1,15 +1,17 @@
 [
     {
+        "newday": false,
+        "name": "O9",
+        "date": "2026-01-26",
+        "time": "11:01",
+        "msg": "hello"
+    },
+
+    {
+        "newday": true,
         "name": "I4",
         "date": "2026-01-02",
         "time": "11:00",
         "msg": "hi"
-    },
-
-    {
-        "name": "O9",
-        "date": "2026-01-26",
-        "time": "11:00",
-        "msg": "hello"
     }
 ]
