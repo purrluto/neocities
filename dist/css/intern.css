@@ -268,58 +268,45 @@ span.datetime {
     padding: 0.5rem;
 }
 
-/* login page */
-
-body .login {
-    background: black !important;
-}
-
 /* loader */
-#loader {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  z-index: 5;
-  width: 120px;
-  height: 120px;
-  margin: -76px 0 0 -76px;
-  border: 16px solid #f3f3f3;
-  border-radius: 50%;
-  border-top: 16px solid #3498db;
-  -webkit-animation: spin 2s linear infinite;
-  animation: spin 2s linear infinite;
+div#loader {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: black;
+    display: block;
+    z-index: 5;
+    top: 0;
+    opacity: 0;
+    pointer-events: none;
 }
 
-@-webkit-keyframes spin {
-  0% { -webkit-transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(360deg); }
+div#loader {
+  -webkit-animation-name: blackfade;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: 1;
+  animation-name: blackfade;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
 }
 
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+@-webkit-keyframes blackfade {
+    0%, 50% { opacity:1 } 
+    100% { opacity:0 }
 }
 
-/* Add animation to "page content" */
-.animate-bottom {
-  position: relative;
-  -webkit-animation-name: animatebottom;
-  -webkit-animation-duration: 1s;
-  animation-name: animatebottom;
-  animation-duration: 1s
+@keyframes blackfade { 
+    0%, 50% { opacity:1 } 
+    100% { opacity:0 }
 }
 
-@-webkit-keyframes animatebottom {
-  from { bottom:-100px; opacity:0 } 
-  to { bottom:0px; opacity:1 }
-}
-
-@keyframes animatebottom { 
-  from{ bottom:-100px; opacity:0 } 
-  to{ bottom:0; opacity:1 }
-}
-
-#myDiv {
-  display: none;
-  text-align: center;
+div#bar {
+    top: 50%;
+    background: linear-gradient(transparent, transparent, transparent, transparent, transparent, transparent);
+    position: absolute;
+    width: 100%;
+    height: 1rem;
+    transform: translateY(-0.5rem);
+    pointer-events: none;
+    z-index: 6;
 }

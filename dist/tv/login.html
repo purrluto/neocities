@@ -5,19 +5,37 @@
         <meta name="author" content="purrluto">
         <meta name="description" content="[RESTRICTED ACCESS.]">
         <title>Parapop TV Employee Portal Login</title>
-        <link href="../css/intern.css?nocache=1769545234068" rel="stylesheet">
+        <link href="../css/login.css?nocache=1769552949936" rel="stylesheet">
         <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
         <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
         <script src="../scripts/login.js"></script>
         <!--if you're digging around in here that's fine. hello! i see you probably didn't want to do the morse code!-->
     </head>
     <body>
-        <form action="javascript:void(0);">
-            <label for="user">Username:</label><br>
-            <input type="text" id="user" name="user" value="intern4"><br>
-            <label for="pass">Password:</label><br>
-            <input type="text" id="pass" name="pass"><br><br>
-            <input type="submit" value="Submit">
-        </form> 
+        <div id="logo">
+            <a href="https://parapop.crd.co/" target="_blank">
+                <img src="../assets/img/ptvbig.png" />
+            </a>
+        </div>
+        <div class="container">
+            <div id="warning" class="animate">Exceeded number of attempts.<br>A system administrator has been contacted.</div>
+            <form action="javascript:void(0);">
+                <div class="wrapper">
+                <label for="user">Username:</label><br>
+                <input type="text" id="user" name="user" value="intern4">
+                </div>
+                <div class="wrapper">
+                <label for="pass">Password:</label><br>
+                <input type="password" id="pass" name="pass">
+                </div>
+                <input type="submit" class="submit" value="Login">
+                <div class="wrapper">
+                    <div id="wrong">
+                        Failed attempt.<br>
+                        <div id="attempts"><span id="countdown"></span> attempts remaining.</div>
+                    </div>
+                </div>
+            </form> 
+        </div>
     </body>
 </html>

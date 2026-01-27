@@ -88,8 +88,11 @@ $(document).ready(function() {
 //                              :::::..
 // ascii deer by Veronica Karlsson
 
+let attempts = 4;
+
 function submitForm() {
   let askdlclalssldclaskgkasd = $('#user').val();
+  $("#wrong").hide();
   let rouaghsdsfasdfasdcs = $('#pass').val();
 
 //                         ,     ,
@@ -141,17 +144,16 @@ function submitForm() {
 // ascii dog by unknown
     window.location.replace("portal/0fd2c519-ebe3-4746-ade3-e1fd18789ce8");
   } else {
-    alert("electric chair");
+    $("#wrong").show();
+    if(attempts <= 3) {
+      $("#countdown").text(attempts);
+      if(attempts <= 0 ) {
+        $("form :input").prop("disabled", true);
+        $("#warning").css("display", "flex");
+      }
+      $("#attempts").show();
+
+    }
+    attempts = attempts - 1;
   }
 };
-
-var myVar;
-
-function myFunction() {
-  myVar = setTimeout(showPage, 2);
-}
-
-function showPage() {
-  document.getElementById("loader").style.display = "none";
-  // document.getElementById("myDiv").style.display = "block";
-}
