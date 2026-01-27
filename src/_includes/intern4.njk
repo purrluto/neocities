@@ -40,64 +40,74 @@
         <!-- primary -->
         <div class="main">
             <div class="details">
-            <details name="page" style="--n: 1" open>
-                <summary>Observations</summary>
-                <div>
-                <p>Reports on Pluto's behavior.</p>
-                {% for report in i4reports %}
-                    <p class="title">{{ report.title }}</p>
-                    <div class="desc">
-                        {% for para in report.desc %}
-                            <p>{{ para }}</p>
-                        {% endfor %}
-                        <p class="subtitle">Notable Events:</p>
-                        <ul>
-                        {% for event in report.events %}
-                            <li>{{ event }}</li>
-                        {% else %}
-                            <li>Nothing notable.</li>
-                        {% endfor %}
-                        </ul>
-                        <p class="subtitle">Relationships:</p>
-                        <ul>
-                        {% for rel in report.rels %}
-                            <li>{{ rel }}</li>
-                        {% else %}
-                            <li>No significant developments.</li>
-                        {% endfor %}
-                        </ul>
-                        <p class="subtitle">Additional Notes:</p>
-                        <ul>
-                        {% for note in report.notes %}
-                            <li>{{ note }}</li>
-                        {% else %}
-                            <li>Nothing notable.</li>
-                        {% endfor %}
-                        </ul>
+                <details name="page" style="--n: 1" open>
+                    <summary>Observations</summary>
+                    <div>
+                    <p>Reports on Pluto's behavior.</p>
+                    {% for report in i4reports %}
+                        <p class="title">{{ report.title }}</p>
+                        <div class="desc">
+                            {% for para in report.desc %}
+                                <p>{{ para }}</p>
+                            {% endfor %}
+                            <p class="subtitle">Notable Events:</p>
+                            <ul>
+                            {% for event in report.events %}
+                                <li>{{ event }}</li>
+                            {% else %}
+                                <li>Nothing notable.</li>
+                            {% endfor %}
+                            </ul>
+                            <p class="subtitle">Relationships:</p>
+                            <ul>
+                            {% for rel in report.rels %}
+                                <li>{{ rel }}</li>
+                            {% else %}
+                                <li>No significant developments.</li>
+                            {% endfor %}
+                            </ul>
+                            <p class="subtitle">Additional Notes:</p>
+                            <ul>
+                            {% for note in report.notes %}
+                                <li>{{ note }}</li>
+                            {% else %}
+                                <li>Nothing notable.</li>
+                            {% endfor %}
+                            </ul>
+                        </div>
+                    {% endfor %}
                     </div>
-                {% endfor %}
-                </div>
-            </details>
-            <details name="page" style="--n: 2">
-                <summary>Journal</summary>
-                <div>
-                    <p>Pluto's journal entries on the server.</p>
-                </div>
-            </details>
-            <details name="page" style="--n: 3">
-                <summary>Music Notes</summary>
-                <div>
-                    <p>Pluto's music journal on the server.</p>
-                    <p class="title"></p>
-                    <div class="description"></div>
-                </div>
-            </details>
-            <details name="page" style="--n: 4">
-                <summary>Albums</summary>
-                <div>
-                    <p>Pluto's albums on the server.</p>
-                </div>
-            </details>
+                </details>
+                <details name="page" style="--n: 2">
+                    <summary>Journal</summary>
+                    <div>
+                        <p>Pluto's journal entries on the server.</p>
+                        {% for entry in i4journals %}
+                        <p class="title">{{ entry.no }}</p>
+                        <div class="desc">
+                            {% for para in entry.desc %}
+                                <p>{{ para }}</p>
+                            {% endfor %}
+                            
+                        </div>
+                    {% endfor %}
+                    </div>
+                </details>
+                <details name="page" style="--n: 3">
+                    <summary>Drawings</summary>
+                    <div>
+                        <p>Pluto's art. In various books on the server.</p>
+                        <p class="title"></p>
+                        <div class="description"></div>
+                    </div>
+                </details>
+                <details name="page" style="--n: 4">
+                    <summary>Albums</summary>
+                    <div>
+                        <p>Pluto's albums on the server.</p>
+                    </div>
+                </details>
+            <div id="bg"></div>
             </div>
         </div>
         </div>

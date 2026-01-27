@@ -5,6 +5,10 @@ maybe a fun border at the bottom
 
 :root {
     --gray: #b7b7b7;
+    --green: #00F635;
+    --pink: #FF00BF;
+    --blue: #00FFFF;
+    --yellow: #FFD800;
 }
 
 @font-face {
@@ -32,7 +36,8 @@ maybe a fun border at the bottom
 }
 
 body {
-    background: var(--gray);
+    background: url('../assets/img/parapopbg.png') repeat-x bottom, linear-gradient(transparent, #898989);
+    background-color: var(--gray);
     margin: 0;
     box-sizing: border-box;
 }
@@ -56,6 +61,9 @@ body {
 .topbar > .lhs {
     flex-grow: 1;
 }
+.topbar > .rhs {
+    margin-right: 1rem;
+}
 
 .topbar .name {
     text-transform: uppercase;
@@ -71,7 +79,7 @@ body {
     margin-top: 10vh;
     border-radius: 1rem 1rem 0 0;
     overflow: clip;
-    background: pink;
+    background: black;
     box-sizing: border-box;
     padding: 1rem;
 }
@@ -89,6 +97,15 @@ column gap is for space between tabs */
     column-gap: 1rem;
 }
 
+#bg {
+    background: var(--gray);
+    grid-row: 2;
+    grid-column: 1/-1;
+    height:100%;
+    z-index: 0;
+    border-radius: 0 0 1rem 1rem;
+}
+
 /* use subgrid to use the divisions from before */
 details {
     height: 100%;
@@ -97,6 +114,8 @@ details {
     grid-template-rows: subgrid;
     grid-column: 1 / -1;
     grid-row: 1 / span 3;
+    overflow: hidden;
+    border-radius: 1rem;
 }
 
 summary {
@@ -128,15 +147,19 @@ details:not([open])::details-content {
 
 details:nth-of-type(1) summary {
     grid-column: 1 / span 1;
+    background: var(--yellow);
 }
 details:nth-of-type(2) summary {
     grid-column: 2 / span 1;
+    background: var(--blue);
 }
 details:nth-of-type(3) summary {
     grid-column: 3 / span 1;
+    background: var(--pink);
 }
 details:nth-of-type(4) summary {
     grid-column: 4 / span 1;
+    background: var(--green);
 }
 
 /* end of css from css-tricks */
@@ -181,6 +204,7 @@ details summary {
     background: lightblue;
     border-bottom: none;
     border-radius: 1rem 1rem 0 0;
+    user-select: none;
 }
 
 details[open] summary {
@@ -198,21 +222,22 @@ details:not([open]) summary {
     width: 250px;
     bottom: 0;
     right: 5%;
-    background: white;
+    background: black;
     box-sizing: border-box;
     z-index: 3;
     padding: 0.5rem;
     padding-bottom: 0;
-    background: pink;
     border-radius: 0.5rem 0.5rem 0 0;
 }
 
 .chatbox > .header {
-    background: pink;
+    background: var(--pink);
     font-family: 'Pixellari', sans-serif;
     box-sizing: border-box;
+    border-radius:0.5rem 0.5rem 0 0;
     padding: .5rem;
     text-transform: uppercase;
+    user-select: none;
 }
 
 .chatbox > .chats {
