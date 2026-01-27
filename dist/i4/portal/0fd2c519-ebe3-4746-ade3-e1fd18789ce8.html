@@ -5,14 +5,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="purrluto">
         <meta name="description" content="[RESTRICTED ACCESS.]">
-        <title>{{ title }}</title>
-        <link href="../../css/intern.css{{ nocache }}" rel="stylesheet">
+        <title>Parapop TV Employee Portal</title>
+        <link href="../../css/intern.css?nocache=1769544682671" rel="stylesheet">
         <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
         <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
-        <script src="../../login.js"></script>
     </head>
-    <body onLoad="myFunction()">
-        <div id="loader"></div>
+    <body>
         <!-- top bar -->
         <div class="topbar">
             <img src="../../assets/img/parapoplogo.png" height="50px" width="50px"/>
@@ -24,17 +22,21 @@
         <div class="chatbox">
             <div class="header">Communications (O9)</div>
             <div class="chats">
-                {% for chat in i4chats %}
+                
                     <div class="fullmsg">
-                        <p><b>{{ chat.name }}</b> <span class="datetime">{{ chat.date }}, {{ chat.time }}</span></p>
-                        <p>{{ chat.msg }}</p>
+                        <p><b>O9</b> <span class="datetime">2026-01-26, 11:01</span></p>
+                        <p>hello</p>
                     </div>
-                    {% if chat.newday %}
-                    <div class="divider">- {{ chat.date }} -</div>
-                    {% endif %}
-                {% else %}
-                    <p>FAILED TO FETCH</p>
-                {% endfor %}
+                    
+                
+                    <div class="fullmsg">
+                        <p><b>I4</b> <span class="datetime">2026-01-02, 11:00</span></p>
+                        <p>hi</p>
+                    </div>
+                    
+                    <div class="divider">- 2026-01-02 -</div>
+                    
+                
                 <div class="divider">Beginning of messages.</div>
             </div>
         </div>
@@ -46,53 +48,92 @@
                     <summary>Observations</summary>
                     <div>
                     <p>Reports on Pluto's behavior.</p>
-                    {% for report in i4reports %}
-                        <p class="title">{{ report.title }}</p>
+                    
+                        <p class="title">01/26</p>
                         <div class="desc">
-                            {% for para in report.desc %}
-                                <p>{{ para }}</p>
-                            {% endfor %}
+                            
+                                <p>sentence1</p>
+                            
+                                <p>sentence2</p>
+                            
                             <p class="subtitle">Notable Events:</p>
                             <ul>
-                            {% for event in report.events %}
-                                <li>{{ event }}</li>
-                            {% else %}
-                                <li>Nothing notable.</li>
-                            {% endfor %}
+                            
+                                <li>event1</li>
+                            
+                                <li>event2</li>
+                            
                             </ul>
                             <p class="subtitle">Relationships:</p>
                             <ul>
-                            {% for rel in report.rels %}
-                                <li>{{ rel }}</li>
-                            {% else %}
-                                <li>No significant developments.</li>
-                            {% endfor %}
+                            
+                                <li>rel1</li>
+                            
+                                <li>rel2</li>
+                            
                             </ul>
                             <p class="subtitle">Additional Notes:</p>
                             <ul>
-                            {% for note in report.notes %}
-                                <li>{{ note }}</li>
-                            {% else %}
-                                <li>Nothing notable.</li>
-                            {% endfor %}
+                            
+                                <li>note1</li>
+                            
                             </ul>
                         </div>
-                    {% endfor %}
+                    
+                        <p class="title">01/26</p>
+                        <div class="desc">
+                            
+                                <p>sentence1</p>
+                            
+                                <p>sentence2</p>
+                            
+                            <p class="subtitle">Notable Events:</p>
+                            <ul>
+                            
+                                <li>Nothing notable.</li>
+                            
+                            </ul>
+                            <p class="subtitle">Relationships:</p>
+                            <ul>
+                            
+                                <li>No significant developments.</li>
+                            
+                            </ul>
+                            <p class="subtitle">Additional Notes:</p>
+                            <ul>
+                            
+                                <li>Nothing notable.</li>
+                            
+                            </ul>
+                        </div>
+                    
                     </div>
                 </details>
                 <details name="page" style="--n: 2">
                     <summary>Journal</summary>
                     <div>
                         <p>Pluto's journal entries on the server.</p>
-                        {% for entry in i4journals %}
-                        <p class="title">{{ entry.no }}</p>
+                        
+                        <p class="title">Journal Entry 1</p>
                         <div class="desc">
-                            {% for para in entry.desc %}
-                                <p>{{ para }}</p>
-                            {% endfor %}
+                            
+                                <p>part 1</p>
+                            
+                                <p>part 2</p>
+                            
                             
                         </div>
-                    {% endfor %}
+                    
+                        <p class="title">Music Notes 1</p>
+                        <div class="desc">
+                            
+                                <p>part 1</p>
+                            
+                                <p>part 2</p>
+                            
+                            
+                        </div>
+                    
                     </div>
                 </details>
                 <details name="page" style="--n: 3">
