@@ -151,3 +151,17 @@ div#warning {
   from { bottom:-1rem; opacity:0 } 
   to { bottom:0; opacity:1 }
 }
+
+@media(max-width: 768px) {
+    body {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+
+    .container {
+        grid-column: 1;
+    }
+
+    #logo {
+        grid-column: 1;
+    }
+}
