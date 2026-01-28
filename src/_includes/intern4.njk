@@ -9,7 +9,6 @@
         <link href="../../css/intern.css{{ nocache }}" rel="stylesheet">
         <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
         <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
-        <script src="../../login.js"></script>
     </head>
     <body>
         <div id="bar"></div>
@@ -100,8 +99,16 @@
                     <summary>Drawings</summary>
                     <div>
                         <p>Pluto's art. In various books on the server.</p>
-                        <p class="title"></p>
-                        <div class="description"></div>
+                        <div class="description">
+                            <div id="drawings">
+                                {% for art in i4gallery %}
+                                    <img src={{ art.src }} alt={{ art.alt }} />
+                                    <p>{{ art.caption }}</p>
+                                {% else %}
+                                    <p>No images.</p>
+                                {% endfor %}
+                            </div>
+                        </div>
                     </div>
                 </details>
                 <details name="page" style="--n: 4">
