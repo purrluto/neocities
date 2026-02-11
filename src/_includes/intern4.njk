@@ -42,9 +42,9 @@
         <!-- primary -->
         <div class="main">
             <div class="details">
-                <details name="page" style="--n: 1" open>
+                <details name="page" style="--n: 1" open >
                     <summary>Observations</summary>
-                    <div>
+                    <div class="detailsdesc">
                     <p>Reports on Pluto's behavior.</p>
                     {% for report in i4reports %}
                         <p class="title">{{ report.title }}</p>
@@ -82,7 +82,7 @@
                 </details>
                 <details name="page" style="--n: 2">
                     <summary>Journal</summary>
-                    <div>
+                    <div class="detailsdesc">
                         <p>Pluto's journal entries on the server.</p>
                         {% for entry in i4journals %}
                         <p class="title">{{ entry.no }}</p>
@@ -97,24 +97,38 @@
                 </details>
                 <details name="page" style="--n: 3">
                     <summary>Drawings</summary>
-                    <div>
+                    <div class="detailsdesc">
                         <p>Pluto's art. In various books on the server.</p>
-                        <div class="description">
-                            <div id="drawings">
-                                {% for art in i4gallery %}
+                        <div id="drawings">
+                            {% for art in i4gallery %}
+                            <div class="imgcnt">
+                                <a href={{ art.src }} target="_blank">
                                     <img src={{ art.src }} alt={{ art.alt }} />
-                                    <p>{{ art.caption }}</p>
-                                {% else %}
-                                    <p>No images.</p>
-                                {% endfor %}
+                                </a>
+                                <p>{{ art.caption }}</p>
                             </div>
+                            {% else %}
+                                <p>No images.</p>
+                            {% endfor %}
                         </div>
                     </div>
                 </details>
                 <details name="page" style="--n: 4">
                     <summary>Albums</summary>
-                    <div>
+                    <div class="detailsdesc">
                         <p>Pluto's albums on the server.</p>
+                        <div id="albums">
+                            {% for pic in i4albums %}
+                            <div class="imgcnt">
+                                <a href={{ pic.src }} target="_blank">
+                                    <img src={{ pic.src }} alt={{ pic.alt }} />
+                                </a>
+                                <p>{{ pic.caption }}</p>
+                            </div>
+                            {% else %}
+                                <p>No images.</p>
+                            {% endfor %}
+                        </div>
                     </div>
                 </details>
             <div id="bg"></div>

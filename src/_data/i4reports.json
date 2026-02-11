@@ -1,27 +1,27 @@
 [
-    {"title": "01/26",
+    {"title": "18-11: INITIAL IMPRESSIONS",
     "desc": [
-        "sentence1",
-        "sentence2"
+        "There was an issue with audio at the beginning of the recorded footage. Early start may have resulted in some strange issues. Regardless, it was recovered.",
+        "Pluto seemed very disoriented starting out, flipping from very cheery at first to very quiet. It seemed like the new game medium was somewhat strange to her.",
+        "She followed others around quite a bit, though wasn’t as talkative as her programmed personality would make one believe. Likely side effects of being in a new medium? Regardless, she was friendly to everyone and attempted to chat.",
+        "Seems to be fine with photos taken of her regardless.",
+        "Very conscious of being a video game character."
         ],
     "events": [
-        "event1",
-        "event2"
+        "Mentioned to the characters GG and Marchio that she was a game character. Seems hesitant to believe that they’re real people, as they do.",
+        "Tried to call out to players via the name starlight.",
+        "Listened to music with Wolf at his… base. Seemed to help her relax a bit.",
+        "Died 3-4 times (go back to check)."
     ],
     "rels":[
-        "rel1",
-        "rel2"
+        "She’s now acquainted with Marchio, Risen, Bog, GG, Zeno, and Wolf.",
+        "Friendly terms with all of them, seems to particularly enjoy Marchio, GG, and Wolf’s company."
     ],
     "notes":[
-        "note1"
-    ]},
+        "I’ll be leaving her connected to the server for the foreseeable future. She seems to need to get reoriented regardless.",
+        "Body-wise, she seems to not feel pain as much as other characters; it may be that she’s used to it, since she could get hit in her original game and her original ability in her game is an extra life.",
+        "Didn’t understand hunger.",
+        "Took a very long time to learn the basics of crafting, though that may be because the others were friendly and donated items."
 
-    {"title": "01/26",
-    "desc": [
-        "sentence1",
-        "sentence2"
-    ],
-    "events": [],
-    "rels": [],
-    "notes": []}
+    ]}
 ]
