@@ -4,6 +4,7 @@ title: "Blade Savant - D&D 5e Homebrew"
 homebrewname: "Blade Savant"
 summary: "A complete homebrew martial class for D&D 5E."
 5eclass: true
+classname: "blade-savant"
 version: "v1.4.0"
 nesting: "../../"
 images: "assets/img"
@@ -53,231 +54,233 @@ images: "assets/img"
         You can make a Blade Savant quickly by following these suggestions. First, make Dexterity your highest ability score, or Strength if you are going to choose the Doppelsöldner blade technique. Your next-highest score should be Intelligence, followed by Constitution. Second, choose the Noble or Folk Hero background.
     </section>
 </section>
-<section id="class-features">
-    <section>
-        <h2>Class Features</h2>
-        <p>As a Blade Savant you gain the following class features.</p>
-    </section>
-    <section>
-        <h4>Hit Points</h4>
-        <ul class="list-5e">
-            <li><mark>Hit Dice:</mark> 1d8 per Blade Savant level</li>
-            <li><mark>Hit Points at 1st Level:</mark> 8 + Constitution modifier</li>
-            <li><mark>Hit Points at Higher Levels:</mark> 1d8 (or 5) + Constitution modifier per Blade Savant level after 1st</li>
-        </ul>
-    </section>
-    <section>
-        <h4>Proficiencies</h4>
-        <ul class="list-5e">
-            <li><mark>Armor:</mark> Light armor, medium armor</li>
-            <li><mark>Weapons:</mark> Simple weapons, martial weapons</li>
-            <li><mark>Tools:</mark> None</li>
-            <li><mark>Saving Throws:</mark> Dexterity, Intelligence</li>
-            <li><mark>Skills:</mark> Choose three from the following: Acrobatics, 	Athletics, Intimidation, Insight, Investigation, Perception, and Performance.</li>
-        </ul>
-    </section>
-    <section>
-        <h4>Equipment</h4>
-        <p>You start with the following equipment, in addition to the equipment granted by your background:</p>
-        <ul>
-            <li>(a) a rapier, (b) a shortsword, or (c) a scimitar</li>
-            <li>(a) a light crossbow and 20 bolts or (b) two daggers</li>
-            <li>(a) a dungeoneer's pack or (b) an explorer's pack</li>
-        </ul>
-    </section>
-    <section>
-        <h3>Parry and Riposte</h3>
-        <p>You have learned how to redirect your opponents blows and then use that opening to retaliate. When you are hit by a weapon attack you can use your reaction to spend a Parry die and reduce the damage by 1d4 + your Dexterity modifier. Additionally, you can make a melee weapon attack against the attacker as part of the same reaction, referred to as a riposte.</p>
-        <p>You have an amount of Parry dice equal to half your Blade Savant level (rounded up) + your Intelligence modifier and regain all dice during a short or long rest. You must be wielding a melee weapon that has the finesse property or deals slashing damage to use this feature.</p>
-        <p>Your Parry die changes when you reach certain levels in this class. The die becomes a d6 at 3rd level, a d8 at 5th level, a d10 at 9th level, and a d12 at 15th level.</p>
-    </section>
-    <section>
-        <h3>Unarmored Defense</h3>
-        <p>You are able to see through any feint attack and predict where your opponent is going to attack from next. Starting from 1st level, if you are wearing no armor and are not wielding a shield, your armor class equals 10 + your Dexterity modifier + your Intelligence modifier.</p>
-    </section>
-    <section>
-        <h3>Retribution</h3>
-        <p>Starting at 2nd level, when you spend a Parry die you then gain a Retribution die. After an hour out of combat, you lose all Retribution dice. The size of your Retribution dice is the same as your Parry die.</p>
-        <p>When you parry or roll for weapon damage, you can use an amount of Retribution dice up to your Proficiency Bonus to add to the roll.</p>
-    </section>
-    <section>
-        <h3>Duelist's Insight</h3>
-        <p>At 2nd level, you notice particular things about another person’s capabilities. When you use your Parry and Riposte feature against another creature, you learn one of the following characteristics of your choice:</p>
-
-<ul>
-
-  <li>One of their weapon or armor proficiencies</li>
-
-  <li>One of their saving throw proficiencies</li>
-
-  <li>Armor Class</li>
-
-  <li>Total class levels, if any</li>
-
-  <li>Fighting Style, if any</li>
-
-</ul>
-    </section>
-    <section>
-        <h3>Blade Technique</h3>
-        <p>At 3rd level, you choose to specialize in a specific technique. Choose Sabreur, Doppelsöldner, or Battōka, all detailed at the end of the class description. The technique you choose grants you features at 3rd level and again at 6th, 11th, and 17th level.</p>
-    </section>
-    <section>
-        <h3>Ability Score Increase</h3>
-        <p>When you reach 4th level, and again at 8th, 10th, 12th, 16th and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.</p>
-    </section>
-    <section>
-        <h3>Extra Attack</h3>
-        <p>Beginning at 5th level, you can attack twice, instead of once, whenever you take the Attack action on your turn.</p>
-    </section>
-    <section>
-        <h3>Evasion</h3>
-        <p>At 7th level, your ability to predict your enemy’s actions lets you dodge out of the way of certain area effects, such as a blue dragon’s lightning breath or a fireball spell. When you are subjected to an effect that allows you to make a Dexterity saving throw to take only half damage, you instead take no damage if you succeed on the saving throw, and only half damage if you fail.</p>
-    </section>
-    <section>
-        <h3>Sharp-Witted</h3>
-        <p>Beginning at 13th level, your analytical prowess extends beyond combat. You can use your Intelligence modifier, instead of Wisdom, for Perception and Insight skill checks.</p>
-        <p>Additionally, you gain a +5 to your passive Perception, Insight and Investigation scores.</p>
-    </section>
-    <section>
-        <h3>Unyielding</h3>
-        <p>At 14th level, your confidence and sense of self has been fully honed and your focus cannot be swayed. You are immune to the charmed and frightened conditions.</p>
-    </section>
-    <section>
-        <h3>Full Counter</h3>
-        <p>Starting at 18th level, after you successfully reduce damage from a weapon attack to 0 using your Parry and Riposte feature, you regain your Reaction. You may use Retribution dice to achieve this.</p>
-    </section>
-    <section>
-        <h3>Invulnerable Focus</h3>
-        <p>
-At 20th level, your speed and cunning in combat is unparalleled. When you roll initiative and have no parries left, you regain half of your total parries, rounded down.</p>
-    </section>
-</section>
-<section id="subclasses">
-    <section>
-        <h2>Blade Techniques</h2>
-        <p>
-        Like other classes, blade savants choose an archetype by third level. These archetypes are mostly based on different types of real combat styles, ranging from the fencers of Western Europe to the _ of Central Africa.</p>
-        <p>For notes on the real-life inspirations, check the References section at the end of the document once it's added!</p>
-    </section>
-    <section>
-        <h3>Sabreur</h3>
-        <p>Masters at one-on-ones, sabreurs are known for their impressive duels and ability to pick out their opponents weaknesses. Their choice to excel in this field makes them quite feared in the high society of countries that still settle feuds via duel—after all, what argument is worth your potential death, or worse, loss of face?</p>
-        <section>
-            <h4>En Garde</h4>
-            <p>Starting at 3rd level, you may use your bonus action to mark one creature as your opponent for 1 minute. The mark ends early if you fall unconscious, you die, or if combat ends. While the creature is marked, you gain the following benefits:</p>
-            <ul>
-                <li>You roll an additional amount of damage dice equal to half your proficiency bonus rounded down when determining riposte damage against your chosen opponent.</li>
-                <li>Any attack roll against your chosen opponent is a critical hit on a roll of 19 or 20.</li>
-                <li>You can use this feature up to 2 times, and you regain all uses during a long rest.</li>
-            </ul>
-        </section>
-        <section>
-            <h4>Advance</h4>
-            <p>At 6th level, when you hit a creature with an opportunity attack, you can move up to 15 feet towards it after it has finished moving. This movement does not provoke opportunity attacks.</p>
-        </section>
-        <section>
-            <h4>Engage</h4>
-            <p>Beginning at 11th level, when you first mark a creature using your En Garde feature, you can choose to make them make an Intelligence saving throw. The DC is equal to 8 + your proficiency bonus + your Intelligence modifier. On a failed save, the marked creature cannot use its action for anything other than attacking you. At the end of each of its turns, it can make another Wisdom saving throw. On a success, this effect ends.</p>
-        </section>
-        <section>
-            <h4>Remise</h4>
-            <p>At 17th level, you learn to pinpoint your opponents vitals to cause massive damage. Whenever you score a critical hit with a one-handed piercing weapon, the target suffers an additional amount of damage equal to half the damage dealt at the end of its next turn.</p>
-        </section>
-    </section>
-    <section>
-        <h3>Doppelsöldner</h3>
-        <p>Doppelsöldner are impressive front liners--first to charge in, yet often the last ones standing. While many in forlorn hope ranks fall, some of them rise above the rest and spend years rushing forward and carving a path for their comrades. And after the fight is done? They relish the additional pay they receive for their courage.</p>
-        <section>
-            <h4>Hold the Line</h4>
-            <p>Starting from 3rd level, you can choose to use your Strength modifier, instead of your Dexterity modifier, to your Unarmored Defense and Parry and Riposte damage reduction. Additionally, your maximum hit points increase by 3 hit points, and each time you gain a level in this class you gain one additional hit point.</p>
-        </section>
-        <section>
-            <h4>Breakthrough</h4>
-            <p>At 3rd level, you know exactly how to rush down your enemies. You can stow and draw weapons as a free action. When you make a ranged weapon attack on your turn, you can then use your bonus action to move up to your speed towards your target.</p>
-            <p>If you move up to your full speed or end your movement within ten feet of the target, the next time you use your Parry and Riposte feature before your next turn you additionally gain resistance to the attack that triggered it.</p>
-            <p>You can use this feature a number of times equal to your Intelligence modifier and regain all uses during a short or long rest.</p>
-        </section>
-        <section>
-            <h4>Lock Horns</h4>
-            <p>Starting from 6th level, you know to take the fight to your enemies first. At the beginning of combat before anyone takes their turn, you can make one ranged attack. When you attack in this way, you can then use your Breakthrough feature as a free action and without expending any usages.</p>
-            <p>Additionally, you have resistance to all damage during the first round of combat.</p>
-        </section>
-        <section>
-            <h4>Run Them Down</h4>
-            <p>At 11th level, when you use your Breakthrough feature and end within ten feet of the original target, the next time you attack them before your next turn and spend Retribution dice to add to the damage roll, you double the chosen amount without expending any additional dice.</p>
-        </section>
-        <section>
-            <h4>Mettle</h4>
-            <p>Starting at 17th level, even in times of desperation you know you will make it through. If you have no more than half your hit points (rounded up) left, you gain resistance to bludgeoning, piercing, and slashing damage.</p>
-        </section>
-    </section>
-    <section>
-        <h3>Battōka</h3>
-        <p>The quickest draw, battōka are masters of deflecting their opponents blows and weaving through the battlefield. They pride themselves on their incredible reflexes, and catching one off-guard is nigh-impossible. Even when surrounded by enemies or facing a particularly nimble opponent, a battōka never lets them off without a response.</p>
-        <section>
-            <h4>Swift Counter</h4>
-            <p>Beginning at 3rd level, you can fend off your opponents with truly unrivaled speed. If you are attacked a second time after using your Parry and Riposte feature before the start of your next turn, you can Parry and Riposte the attack without using your reaction, spending the Parry die as you would normally.</p>
-        </section>
-        <section>
-            <h4>Refocus</h4>
-            <p>Starting at 6th level, you can use a bonus action to regain an amount of Parry dice equal to your Intelligence modifier.</p>
-            <p>Once you use this feature, you must finish a short or long rest before you can use it again.</p>
-        </section>
-        <section>
-            <h4>Slipstream</h4>
-            <p>Starting at 11th level, your parries can unsteady your opponents guard. When you use your Parry and Riposte feature, you can choose to move up to 10 feet away as part of the same reaction without provoking opportunity attacks.</p>
-        </section>
-        <section>
-            <h4>Whirlwind Guard</h4>
-            <p>Starting at 17th level, you can use your Action to assume a defensive stance that lasts until the start of your next turn. While in this stance, you have unlimited reactions. You can only use your reaction to use the Parry and Riposte feature or to make an opportunity attack. You can use this feature a number of times equal to your proficiency bonus and you regain any expended uses when you finish a long rest.</p>
-        </section>
-    </section>
-    <section>
-        <h3>Spellward</h3>
-        <p>A unique and somewhat rare breed, spellwards are savants that focus on overtaking mages by using their own magic against them. This focus on mages sometimes earns them the title of witch hunters in magic circles, or outright bans of the practice in certain countries. However, this fear isn’t unfounded—they have been an effective tool in particularly mage-despising tyrants pockets in the past.</p>
-        <p>They aren’t known for just this, of course—while their reputation may vary from place to place, they are also known for their ability and bond with their weapons. They often create their own just so that they can have the perfect match, and since they themselves do not typically have an inherent ability to counter mages, this is their most important tool.</p>
-        <section>
-            <h4>Inscribed Blade</h4>
-            <ul>
-                <li>Starting at 3rd level, you gain proficiency in Smith’s Tools. Additionally, over the course of a long rest, you can modify an existing blade (magical or nonmagical) into an inscribed blade.</li>
-                <li>This weapon counts as magical for the purpose of overcoming resistance and immunity to nonmagical attacks and damage.
-                You can only have one inscribed blade at a time. If you create a new inscribed blade, the previous one loses any abilities associated with this feature, and is no longer considered an inscribed blade.</li>
-            </ul>
-        </section>
-        <section>
-            <h4>Absorption</h4>
-            <p>Also at 3rd level, you can use your Parry and Riposte feature against damaging spell attacks if you are wielding your inscribed blade.</p>
-            <p>When used in this way, your blade absorbs the damage type of the spell. You can only have one damage type absorbed at any time, and if you absorb a new damage type, the previous is lost.</p>
-            <p>The next time you expend Retribution dice on a weapon damage roll after using this feature, you can choose to make the extra damage that of the absorbed damage type. You then lose the absorbed type.</p>
-        </section>
-        <section>
-            <h4>Dispeller</h4>
-            <p>At 6th level, once per 10 minutes you can use your sword to point out the nearest magical source within 30 feet and determine its school of magic.</p>
-            <p>Additionally, you can use your sword to cast Dispel Magic or Remove Curse once per day.</p>
-        </section>
-        <section>
-            <h4>Soul Draw</h4>
-            <p>At 11th level, when you reduce a creature with the Spellcasting feature to 0 points, you gain Retribution dice equal to the level of their highest spell (up to your proficiency modifier). The damage type absorbed from doing so is force damage.</p>
-        </section>
-        <section>
-            <h4>Spellstealer</h4>
-            <p>At 17th level, when you see a creature within 5 feet casting a spell, you can use your Reaction to make a melee weapon attack. If this attack hits, you can force them to make a Constitution save. The DC is equal to 8 + your proficiency bonus + your Intelligence modifier.</p>
-            <p>On a failed save, the spell fails and has no effect. Additionally, if you’re wielding your inscribed blade, you absorb the spell and gain an amount of Retribution dice equal to the spell’s level. The damage type absorbed from doing this is force damage. On a successful save, nothing happens.</p>
-            <p>You can use this feature an amount of times equal to your Intelligence modifier (minimum 1), and regain all uses during a short or long rest.</p>
-        </section>
-    </section>
-</section>
 <section>
-    <section id="multiclass">
-        <h2>Multiclassing</h2>
-        <p>
-            If your group uses the multiclassing rules from the Player’s Handbook, here’s what you need to know if you choose blade savant as one of your classes.
-        </p>
-        <p><mark>Prerequisites.</mark> To qualify for multiclassing into Blade Savant, you must meet these prerequisites: Dexterity and Intelligence of 13 or higher.</p>
-        <p><mark>Proficiencies.</mark>When you multiclass into the Blade Savant class, you gain the following proficiencies: Light armor, simple weapons, martial weapons.</p>
-    </section>
-</section>
-<section id="references">
+    <section id="class-features">
+        <section>
+            <h2>Class Features</h2>
+            <p>As a Blade Savant you gain the following class features.</p>
+        </section>
+        <section>
+            <h4>Hit Points</h4>
+            <ul class="list-5e">
+                <li><mark>Hit Dice:</mark> 1d8 per Blade Savant level</li>
+                <li><mark>Hit Points at 1st Level:</mark> 8 + Constitution modifier</li>
+                <li><mark>Hit Points at Higher Levels:</mark> 1d8 (or 5) + Constitution modifier per Blade Savant level after 1st</li>
+            </ul>
+        </section>
+        <section>
+            <h4>Proficiencies</h4>
+            <ul class="list-5e">
+                <li><mark>Armor:</mark> Light armor, medium armor</li>
+                <li><mark>Weapons:</mark> Simple weapons, martial weapons</li>
+                <li><mark>Tools:</mark> None</li>
+                <li><mark>Saving Throws:</mark> Dexterity, Intelligence</li>
+                <li><mark>Skills:</mark> Choose three from the following: Acrobatics, 	Athletics, Intimidation, Insight, Investigation, Perception, and Performance.</li>
+            </ul>
+        </section>
+        <section>
+            <h4>Equipment</h4>
+            <p>You start with the following equipment, in addition to the equipment granted by your background:</p>
+            <ul>
+                <li>(a) a rapier, (b) a shortsword, or (c) a scimitar</li>
+                <li>(a) a light crossbow and 20 bolts or (b) two daggers</li>
+                <li>(a) a dungeoneer's pack or (b) an explorer's pack</li>
+            </ul>
+        </section>
+        <section>
+            <h3>Parry and Riposte</h3>
+            <p>You have learned how to redirect your opponents blows and then use that opening to retaliate. When you are hit by a weapon attack you can use your reaction to spend a Parry die and reduce the damage by 1d4 + your Dexterity modifier. Additionally, you can make a melee weapon attack against the attacker as part of the same reaction, referred to as a riposte.</p>
+            <p>You have an amount of Parry dice equal to half your Blade Savant level (rounded up) + your Intelligence modifier and regain all dice during a short or long rest. You must be wielding a melee weapon that has the finesse property or deals slashing damage to use this feature.</p>
+            <p>Your Parry die changes when you reach certain levels in this class. The die becomes a d6 at 3rd level, a d8 at 5th level, a d10 at 9th level, and a d12 at 15th level.</p>
+        </section>
+        <section>
+            <h3>Unarmored Defense</h3>
+            <p>You are able to see through any feint attack and predict where your opponent is going to attack from next. Starting from 1st level, if you are wearing no armor and are not wielding a shield, your armor class equals 10 + your Dexterity modifier + your Intelligence modifier.</p>
+        </section>
+        <section>
+            <h3>Retribution</h3>
+            <p>Starting at 2nd level, when you spend a Parry die you then gain a Retribution die. After an hour out of combat, you lose all Retribution dice. The size of your Retribution dice is the same as your Parry die.</p>
+            <p>When you parry or roll for weapon damage, you can use an amount of Retribution dice up to your Proficiency Bonus to add to the roll.</p>
+        </section>
+        <section>
+            <h3>Duelist's Insight</h3>
+            <p>At 2nd level, you notice particular things about another person’s capabilities. When you use your Parry and Riposte feature against another creature, you learn one of the following characteristics of your choice:</p>
 
+    <ul>
+
+    <li>One of their weapon or armor proficiencies</li>
+
+    <li>One of their saving throw proficiencies</li>
+
+    <li>Armor Class</li>
+
+    <li>Total class levels, if any</li>
+
+    <li>Fighting Style, if any</li>
+
+    </ul>
+        </section>
+        <section>
+            <h3>Blade Technique</h3>
+            <p>At 3rd level, you choose to specialize in a specific technique. Choose Sabreur, Doppelsöldner, or Battōka, all detailed at the end of the class description. The technique you choose grants you features at 3rd level and again at 6th, 11th, and 17th level.</p>
+        </section>
+        <section>
+            <h3>Ability Score Increase</h3>
+            <p>When you reach 4th level, and again at 8th, 10th, 12th, 16th and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.</p>
+        </section>
+        <section>
+            <h3>Extra Attack</h3>
+            <p>Beginning at 5th level, you can attack twice, instead of once, whenever you take the Attack action on your turn.</p>
+        </section>
+        <section>
+            <h3>Evasion</h3>
+            <p>At 7th level, your ability to predict your enemy’s actions lets you dodge out of the way of certain area effects, such as a blue dragon’s lightning breath or a fireball spell. When you are subjected to an effect that allows you to make a Dexterity saving throw to take only half damage, you instead take no damage if you succeed on the saving throw, and only half damage if you fail.</p>
+        </section>
+        <section>
+            <h3>Sharp-Witted</h3>
+            <p>Beginning at 13th level, your analytical prowess extends beyond combat. You can use your Intelligence modifier, instead of Wisdom, for Perception and Insight skill checks.</p>
+            <p>Additionally, you gain a +5 to your passive Perception, Insight and Investigation scores.</p>
+        </section>
+        <section>
+            <h3>Unyielding</h3>
+            <p>At 14th level, your confidence and sense of self has been fully honed and your focus cannot be swayed. You are immune to the charmed and frightened conditions.</p>
+        </section>
+        <section>
+            <h3>Full Counter</h3>
+            <p>Starting at 18th level, after you successfully reduce damage from a weapon attack to 0 using your Parry and Riposte feature, you regain your Reaction. You may use Retribution dice to achieve this.</p>
+        </section>
+        <section>
+            <h3>Invulnerable Focus</h3>
+            <p>
+    At 20th level, your speed and cunning in combat is unparalleled. When you roll initiative and have no parries left, you regain half of your total parries, rounded down.</p>
+        </section>
+    </section>
+    <section id="subclasses">
+        <section>
+            <h2>Blade Techniques</h2>
+            <p>
+            Like other classes, blade savants choose an archetype by third level. These archetypes are mostly based on different types of real combat styles, ranging from the fencers of Western Europe to the _ of Central Africa.</p>
+            <p>For notes on the real-life inspirations, check the References section at the end of the document once it's added!</p>
+        </section>
+        <section>
+            <h3>Sabreur</h3>
+            <p>Masters at one-on-ones, sabreurs are known for their impressive duels and ability to pick out their opponents weaknesses. Their choice to excel in this field makes them quite feared in the high society of countries that still settle feuds via duel—after all, what argument is worth your potential death, or worse, loss of face?</p>
+            <section>
+                <h4>En Garde</h4>
+                <p>Starting at 3rd level, you may use your bonus action to mark one creature as your opponent for 1 minute. The mark ends early if you fall unconscious, you die, or if combat ends. While the creature is marked, you gain the following benefits:</p>
+                <ul>
+                    <li>You roll an additional amount of damage dice equal to half your proficiency bonus rounded down when determining riposte damage against your chosen opponent.</li>
+                    <li>Any attack roll against your chosen opponent is a critical hit on a roll of 19 or 20.</li>
+                    <li>You can use this feature up to 2 times, and you regain all uses during a long rest.</li>
+                </ul>
+            </section>
+            <section>
+                <h4>Advance</h4>
+                <p>At 6th level, when you hit a creature with an opportunity attack, you can move up to 15 feet towards it after it has finished moving. This movement does not provoke opportunity attacks.</p>
+            </section>
+            <section>
+                <h4>Engage</h4>
+                <p>Beginning at 11th level, when you first mark a creature using your En Garde feature, you can choose to make them make an Intelligence saving throw. The DC is equal to 8 + your proficiency bonus + your Intelligence modifier. On a failed save, the marked creature cannot use its action for anything other than attacking you. At the end of each of its turns, it can make another Wisdom saving throw. On a success, this effect ends.</p>
+            </section>
+            <section>
+                <h4>Remise</h4>
+                <p>At 17th level, you learn to pinpoint your opponents vitals to cause massive damage. Whenever you score a critical hit with a one-handed piercing weapon, the target suffers an additional amount of damage equal to half the damage dealt at the end of its next turn.</p>
+            </section>
+        </section>
+        <section>
+            <h3>Doppelsöldner</h3>
+            <p>Doppelsöldner are impressive front liners--first to charge in, yet often the last ones standing. While many in forlorn hope ranks fall, some of them rise above the rest and spend years rushing forward and carving a path for their comrades. And after the fight is done? They relish the additional pay they receive for their courage.</p>
+            <section>
+                <h4>Hold the Line</h4>
+                <p>Starting from 3rd level, you can choose to use your Strength modifier, instead of your Dexterity modifier, to your Unarmored Defense and Parry and Riposte damage reduction. Additionally, your maximum hit points increase by 3 hit points, and each time you gain a level in this class you gain one additional hit point.</p>
+            </section>
+            <section>
+                <h4>Breakthrough</h4>
+                <p>At 3rd level, you know exactly how to rush down your enemies. You can stow and draw weapons as a free action. When you make a ranged weapon attack on your turn, you can then use your bonus action to move up to your speed towards your target.</p>
+                <p>If you move up to your full speed or end your movement within ten feet of the target, the next time you use your Parry and Riposte feature before your next turn you additionally gain resistance to the attack that triggered it.</p>
+                <p>You can use this feature a number of times equal to your Intelligence modifier and regain all uses during a short or long rest.</p>
+            </section>
+            <section>
+                <h4>Lock Horns</h4>
+                <p>Starting from 6th level, you know to take the fight to your enemies first. At the beginning of combat before anyone takes their turn, you can make one ranged attack. When you attack in this way, you can then use your Breakthrough feature as a free action and without expending any usages.</p>
+                <p>Additionally, you have resistance to all damage during the first round of combat.</p>
+            </section>
+            <section>
+                <h4>Run Them Down</h4>
+                <p>At 11th level, when you use your Breakthrough feature and end within ten feet of the original target, the next time you attack them before your next turn and spend Retribution dice to add to the damage roll, you double the chosen amount without expending any additional dice.</p>
+            </section>
+            <section>
+                <h4>Mettle</h4>
+                <p>Starting at 17th level, even in times of desperation you know you will make it through. If you have no more than half your hit points (rounded up) left, you gain resistance to bludgeoning, piercing, and slashing damage.</p>
+            </section>
+        </section>
+        <section>
+            <h3>Battōka</h3>
+            <p>The quickest draw, battōka are masters of deflecting their opponents blows and weaving through the battlefield. They pride themselves on their incredible reflexes, and catching one off-guard is nigh-impossible. Even when surrounded by enemies or facing a particularly nimble opponent, a battōka never lets them off without a response.</p>
+            <section>
+                <h4>Swift Counter</h4>
+                <p>Beginning at 3rd level, you can fend off your opponents with truly unrivaled speed. If you are attacked a second time after using your Parry and Riposte feature before the start of your next turn, you can Parry and Riposte the attack without using your reaction, spending the Parry die as you would normally.</p>
+            </section>
+            <section>
+                <h4>Refocus</h4>
+                <p>Starting at 6th level, you can use a bonus action to regain an amount of Parry dice equal to your Intelligence modifier.</p>
+                <p>Once you use this feature, you must finish a short or long rest before you can use it again.</p>
+            </section>
+            <section>
+                <h4>Slipstream</h4>
+                <p>Starting at 11th level, your parries can unsteady your opponents guard. When you use your Parry and Riposte feature, you can choose to move up to 10 feet away as part of the same reaction without provoking opportunity attacks.</p>
+            </section>
+            <section>
+                <h4>Whirlwind Guard</h4>
+                <p>Starting at 17th level, you can use your Action to assume a defensive stance that lasts until the start of your next turn. While in this stance, you have unlimited reactions. You can only use your reaction to use the Parry and Riposte feature or to make an opportunity attack. You can use this feature a number of times equal to your proficiency bonus and you regain any expended uses when you finish a long rest.</p>
+            </section>
+        </section>
+        <section>
+            <h3>Spellward</h3>
+            <p>A unique and somewhat rare breed, spellwards are savants that focus on overtaking mages by using their own magic against them. This focus on mages sometimes earns them the title of witch hunters in magic circles, or outright bans of the practice in certain countries. However, this fear isn’t unfounded—they have been an effective tool in particularly mage-despising tyrants pockets in the past.</p>
+            <p>They aren’t known for just this, of course—while their reputation may vary from place to place, they are also known for their ability and bond with their weapons. They often create their own just so that they can have the perfect match, and since they themselves do not typically have an inherent ability to counter mages, this is their most important tool.</p>
+            <section>
+                <h4>Inscribed Blade</h4>
+                <ul>
+                    <li>Starting at 3rd level, you gain proficiency in Smith’s Tools. Additionally, over the course of a long rest, you can modify an existing blade (magical or nonmagical) into an inscribed blade.</li>
+                    <li>This weapon counts as magical for the purpose of overcoming resistance and immunity to nonmagical attacks and damage.
+                    You can only have one inscribed blade at a time. If you create a new inscribed blade, the previous one loses any abilities associated with this feature, and is no longer considered an inscribed blade.</li>
+                </ul>
+            </section>
+            <section>
+                <h4>Absorption</h4>
+                <p>Also at 3rd level, you can use your Parry and Riposte feature against damaging spell attacks if you are wielding your inscribed blade.</p>
+                <p>When used in this way, your blade absorbs the damage type of the spell. You can only have one damage type absorbed at any time, and if you absorb a new damage type, the previous is lost.</p>
+                <p>The next time you expend Retribution dice on a weapon damage roll after using this feature, you can choose to make the extra damage that of the absorbed damage type. You then lose the absorbed type.</p>
+            </section>
+            <section>
+                <h4>Dispeller</h4>
+                <p>At 6th level, once per 10 minutes you can use your sword to point out the nearest magical source within 30 feet and determine its school of magic.</p>
+                <p>Additionally, you can use your sword to cast Dispel Magic or Remove Curse once per day.</p>
+            </section>
+            <section>
+                <h4>Soul Draw</h4>
+                <p>At 11th level, when you reduce a creature with the Spellcasting feature to 0 points, you gain Retribution dice equal to the level of their highest spell (up to your proficiency modifier). The damage type absorbed from doing so is force damage.</p>
+            </section>
+            <section>
+                <h4>Spellstealer</h4>
+                <p>At 17th level, when you see a creature within 5 feet casting a spell, you can use your Reaction to make a melee weapon attack. If this attack hits, you can force them to make a Constitution save. The DC is equal to 8 + your proficiency bonus + your Intelligence modifier.</p>
+                <p>On a failed save, the spell fails and has no effect. Additionally, if you’re wielding your inscribed blade, you absorb the spell and gain an amount of Retribution dice equal to the spell’s level. The damage type absorbed from doing this is force damage. On a successful save, nothing happens.</p>
+                <p>You can use this feature an amount of times equal to your Intelligence modifier (minimum 1), and regain all uses during a short or long rest.</p>
+            </section>
+        </section>
+    </section>
+    <section>
+        <section id="multiclass">
+            <h2>Multiclassing</h2>
+            <p>
+                If your group uses the multiclassing rules from the Player’s Handbook, here’s what you need to know if you choose blade savant as one of your classes.
+            </p>
+            <p><mark>Prerequisites.</mark> To qualify for multiclassing into Blade Savant, you must meet these prerequisites: Dexterity and Intelligence of 13 or higher.</p>
+            <p><mark>Proficiencies.</mark>When you multiclass into the Blade Savant class, you gain the following proficiencies: Light armor, simple weapons, martial weapons.</p>
+        </section>
+    </section>
+    <section id="references">
+
+    </section>
 </section>
