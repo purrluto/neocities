@@ -1,0 +1,283 @@
+:root {
+    --bg: 36, 35, 41;
+    --main-bg: 235, 231, 220;
+    --accent-bg: 105, 13, 13;
+
+    --main-font: 38, 38, 38;
+    --header-font: 255, 255, 255;
+    --accent-font: 105, 13, 13;
+    --accent-font-2: 150, 14, 14;
+
+    font-size: 14px;
+}
+
+html, *, *:before, *:after {
+  box-sizing: border-box;
+
+  scrollbar-width: thin;
+  scrollbar-color: rgba(var(--accent-bg)) rgba(var(--header-font));
+  scrollbar-gutter: stable;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+
+    color: rgba(var(--main-font), 1);
+    background: rgb(var(--bg));
+    font-family: Georgia, serif;
+}
+
+.main-content {
+    width: 60vw;
+    min-width: 768px;
+    height: 100%;
+}
+
+.border {
+    flex-grow: 1;
+    max-height: calc(100vh - 6.5rem);
+    position: relative;
+    display: flex;
+    border: 1px solid rgba(var(--accent-bg));
+    border-radius: 0.25rem;
+}
+
+.corner {
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    z-index: 1;
+    
+    &::after {
+        content: "✦";
+        height: 2rem;
+        width: 2rem;
+        font-size: 2rem;
+        color: rgba(var(--accent-bg));
+        position: absolute;
+    }
+
+    &.top {
+        top: calc(-1px + -0.5rem);
+        border-top: 1px solid rgba(var(--accent-bg));
+    }
+
+    &.left {
+        left: calc(-1px + -0.5rem);
+        border-left: 1px solid rgba(var(--accent-bg));
+
+    }
+
+    &.right {
+        right: calc(-1px + -0.5rem);
+
+        border-right: 1px solid rgba(var(--accent-bg));
+    }
+
+    &.bottom {
+        bottom: calc(-1px + -0.5rem);
+        border-bottom: 1px solid rgba(var(--accent-bg));
+    }
+
+     &.top::after {
+        top: -1.5rem;
+
+    }
+
+    &.left::after {
+        left: calc(-1rem + 2px);
+
+    }
+
+    &.right::after {
+        right: calc(-1rem + -3px)
+
+
+    }
+
+    &.bottom::after {
+        bottom: calc(-.5rem + -1px);
+    }
+}
+
+main {
+    background: rgba(var(--main-bg), 1);
+    overflow-y: scroll;
+    position: relative;
+    border: 2px solid rgba(var(--accent-bg));
+    border-radius: 0.25rem;
+    margin: 0.5rem;
+}
+
+header {
+    text-align: center;
+    background-color: rgba(var(--accent-bg), 1);
+}
+
+nav {
+    padding: 1rem 0;
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: rgba(var(--accent-font-2));
+    transition: 0.5s;
+
+    &:hover {
+        color: rgba(var(--accent-font));
+    }
+}
+
+footer {
+    margin-top: 0.5rem;
+    padding-bottom: 1rem;
+    text-align: right;
+    color: rgba(var(--header-font));
+}
+
+#class-info {
+    padding: 1rem;
+}
+
+table {
+    border-collapse: collapse;
+    border: 3px double rgba(var(--accent-bg), 1);
+    margin-bottom: 1.25rem;
+}
+
+table#class-table-5e {
+    float: right;
+    position: relative;
+    max-width: 45%;
+    margin-left: 1rem;
+}
+
+table th, table td {
+    padding: 0.2rem 0.5rem;
+}
+
+table tr:nth-child(even) {
+    background: rgba(var(--accent-bg), 0.5);
+}
+
+table tbody::after {
+    content: "⋆｡°⟡";
+    color: rgba(var(--accent-bg));
+    text-align: right;
+
+    position: absolute;
+    width: calc(100% + 2px);
+    bottom: -2rem;
+    left: 0;
+
+    border-top: 1px solid rgba(var(--accent-bg));
+}
+
+header, th, h2, h3, h4 {
+    font-variant: small-caps;
+    color: rgba(var(--accent-font), 1);
+}
+
+header {
+    color: rgba(var(--header-font));
+    padding: .5rem;
+}
+
+.subtitled > h1 {
+    margin:0;
+    padding-top: 1rem;
+    padding-bottom: .25rem;
+}
+
+.subtitled > p {
+    margin-top: 0;
+}
+
+h3::after {
+    content: "";
+    display: block;
+    border-top: 1px solid rgba(var(--accent-bg));
+    overflow: hidden;
+}
+
+table caption > h3 {
+    margin: 0;
+
+    &::after {
+        display: none;
+    }
+}
+
+table caption {
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(var(--accent-bg));
+}
+
+p {
+    text-indent: 2rem;
+}
+
+#class-info section > section p:first-of-type {
+    text-indent: 0;
+}
+
+#class-info section > section:first-of-type p:first-of-type {
+    margin-top: 0;
+}
+
+ul.list-5e {
+    list-style-type: none;
+    text-align: start;
+    text-indent: -3rem;
+}
+
+ul.list-5e mark, #multiclass mark {
+    font-variant: small-caps;
+    color: rgba(var(--accent-font-2));
+    background: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .main-content {
+        width: 100vw;
+        min-width: auto;
+    }
+}
+
+
+@media only screen and (max-width: 480px) {
+    #class-info {
+        display: grid;
+        grid-template-areas: 
+            "intro"
+            "table"
+            "info";
+    }
+
+    section#intro {
+        grid-area: intro;
+    }
+
+    table#class-table-5e {
+        grid-area: table;
+        max-width: 100%;
+    }
+
+    table caption > h3 {
+        margin-top: 1rem;
+    }
+
+    section:not(#intro) {
+        grid-area: info;
+    }
+}

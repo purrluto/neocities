@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="pluto purrluto">
+        <meta name="description" content="placeholder">
+        <title>{{ title }}</title>
+        <link href="/css/homebrew.css{{ nocache }}" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+    </head>
+    <body>
+        <nav class="main-content">
+            <a href="./">🠄 Return to Directory</a>
+        </nav>
+        <div class="border main-content">
+            <div aria-hidden="true" class="corner top left"></div>
+            <div aria-hidden="true" class="corner top right"></div>
+            <div aria-hidden="true" class="corner bottom left"></div>
+            <div aria-hidden="true" class="corner bottom right"></div>
+            <main>
+                <header class="subtitled">
+                    <h1>{{ homebrewname }}</h1>
+                    <p>{{summary}}</p>
+                </header>
+                <article id="class-info">
+                    {% if 5eclass %}
+                    <table id="class-table-5e">
+                        <caption><h3>Blade Savant Class Table</h3></caption>
+                        <tbody>
+                            <tr>
+                                <th>Level</th>
+                                <th>Proficiency Bonus</th>
+                                <th>Class Features</th>
+                            </tr>
+                            {% for i in range(1, 21) -%}
+                                <tr>
+                                    <td>{{ i }}{% if i == 1 %}st{% elif i == 2 %}nd{% elif i == 3 %}rd{% else %}th{% endif %}
+                                    </td>
+                                    <td>+{{ 
+                                            i//4 + 1 if i % 4 == 0 else i // 4 + 2
+                                        }}</td>
+
+                                    <td>feature</td>
+                                </tr>
+                            {%- endfor %}
+                        </tbody>
+                    </table>
+                    {% endif %}
+                    {{ content | safe }}
+                </article>
+            </main>
+        </div>
+        <footer tabindex="0" class="main-content">{{ version }}</footer>
+    </body>
+</html>

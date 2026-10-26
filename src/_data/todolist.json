@@ -6,5 +6,6 @@
     {"desc": "add guestbook.", "complete": true},
     {"desc": "rework about text.", "complete": true},
     {"desc": "add lots of fun graphics!", "complete": false},
-    {"desc": "maybe add a journal section?", "complete": false}
+    {"desc": "maybe add a journal section?", "complete": false},
+    {"desc": "finish figuring out how to display class features", "complete": false}
 ]

@@ -49,7 +49,7 @@ class Header extends HTMLElement {
         <nav>
             <a href="/index.html" title="Go to the homepage!">home</a>
             <a title="A gallery of my art!"><s>gallery</s></a>
-            <a title="My TTRPG (usually D&D5E) homebrew!"><s>homebrew</s></a>
+            <a href="/homebrew/index.html" title="My TTRPG (usually D&D5E) homebrew!">homebrew</a>
             <a title="Extra information about my OCs!"><s>ocs</s></a>
             <a title="Screenshots/Thoughts about games I like!"><s>games</s></a>
             <a title="My tunes!"><s>music</s></a>
