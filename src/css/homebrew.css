@@ -278,7 +278,7 @@ ul.list-5e mark, #multiclass mark {
         margin-top: 1rem;
     }
 
-    section:not(#intro) {
+    #class-info > section:not(#intro) {
         grid-area: info;
     }
 }
