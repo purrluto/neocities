@@ -1,13 +1,11 @@
-{% extends main.njk %}
-
-{% block draggable %}
+{% macro draggable(top, btm, rt, lft, width, height, header) %}
 <div class="nodisplay draggable" style="top: {{ top }}; bottom: {{ btm }}; right: {{ rt }}; left: {{ lft }}; width: {{ width }}; height: {{ height }};">
     <div class="top draggable-header">
         {{ header }}
         <button class="min-button">_</button>
     </div>
     <div class="draggable-body">
-        {{ body }}
+        {{ caller() }}
     </div>
 </div>
-{% endblock %}
+{% endmacro %}

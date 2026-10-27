@@ -1,3 +1,4 @@
+{% import "modules/main-modules.njk" as module %}
 <!DOCTYPE html>
 <html lang="en-US">
     <head>
@@ -7,59 +8,41 @@
         <meta name="description" content="this is the purr-sonal site for pluto purrluto! enjoy your stay!">
         <title>{{ title }}</title>
         <link href="/css/style.css{{ nocache }}" rel="stylesheet">
-        <link href="/css/draggable.css{{ nocache }}" rel="stylesheet">
+        <link href="/css/text.css{{ nocache }}" rel="stylesheet">
+        <link href="/css/modules.css{{ nocache }}" rel="stylesheet">
         <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
         <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
         <script src="/scripts/main.js"></script>
-        <script src="/scripts/header.js"></script>
     </head>
     <body>
         <!-- for optional elements -->
         {% if showChat %}
-            <div class="nodisplay draggable" style="bottom: 10vh; right: 10%; width: 300px;">
-                <div class="top draggable-header">
-                    ★ talk to me? ★
-                    <button class="min-button">_</button>
-                </div>
-                <div class="draggable-body">
-                    <iframe src="https://www3.cbox.ws/box/?boxid=3538579&boxtag=TYc6FR" width="100%" height="450" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>
-                </div>
-            </div>
+            {% call module.draggable('auto', '10vh', '10%', 'auto', '300px', 'fit-content', '★ talk to me? ★') %}
+                <iframe src="https://www3.cbox.ws/box/?boxid=3538579&boxtag=TYc6FR" width="100%" height="450" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>
+            {%- endcall %}
         {% endif %}
 
         {% if showChangeToDo %}
-        <div class="nodisplay draggable" style="top: 3vh; left: 10%; width: 300px;">
-            <div class="top draggable-header">
-                ★ !! TODO !! ★
-                <button class="min-button">_</button>
-            </div>
-            <div class="draggable-body" style="height: 25vh; overflow-y: auto; padding: 4px;">
+            {% call module.draggable('3vh', 'auto', 'auto', '10%', '300px', 'fit-content', '★ !! TODO !! ★') %}
                 <ul id="todo" style="font-size: 10px;">
                     {% for item in todolist %}
                         <li>{% if item.complete %}<strike>{% endif %}{{item.desc}}{% if item.complete %}</strike>{% endif %}</li>
                     {% endfor %}
                 </ul>
-            </div>
-        </div>
-        <div class="nodisplay draggable" style="bottom: 3vh; left: 10%; width: 300px;">
-            <div class="top draggable-header">
-                ★ !! CHANGELOG !! ★
-                <button class="min-button">_</button>
-            </div>
-            <div class="draggable-body" style="height: 25vh; overflow-y: auto; padding: 4px;">
-                <ul id="todo" style="font-size: 10px;">
-                    {% for change in changelog %}
-                        <li>{{change.date}}: {{change.desc}}</li>
-                    {% endfor %}
-                </ul>
-            </div>
-        </div>
+            {%- endcall %}
+            {% call module.draggable('auto', '3vh', 'auto', '10%', '300px', 'fit-content', "★ !! CHANGELOG !! ★") %}
+            <ul id="todo" style="font-size: 10px;">
+                {% for change in changelog %}
+                    <li>{{change.date}}: {{change.desc}}</li>
+                {% endfor %}
+            </ul>
+            {%- endcall %}
         {% endif %}
 
         <!-- primary -->
-        <main class="one-cols">
-            <header-bar link=""></header-bar>
-            <div id="content">
+        <main>
+            {% include 'modules/header-bar.njk' %}
+            <div id="content-wrapper" {% if sidebar %} class="two-cols" {% endif %}>
                 {{ content | safe }}
             </div>
         </main>

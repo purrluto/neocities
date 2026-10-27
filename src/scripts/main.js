@@ -26,4 +26,9 @@ $( function() {
             $( ".dropdown-select" ).hide();
         }
     });
+
+    // load dummy address link
+    $( "span#link" ).html(
+        window.location.pathname
+    );
 } );

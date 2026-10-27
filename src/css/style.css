@@ -14,169 +14,92 @@ main css page! this is used for all the central pages on the site.
     --lilac: #a392ac;
     --darklilac: #876e96;
 
+    font-size: 15px;
+    font-family: Verdana, Arial, sans-serif;
+}
+
+*, *:after, *:before {
+    box-sizing: border-box;
+
     scrollbar-color: var(--pink) var(--purple);
     scrollbar-width: thin;
 }
 
-body, html {
-    height: 100vh;
-    background: url('https://i.pinimg.com/originals/3a/0b/40/3a0b40d96c53860572a1c29970ce14a8.gif') center center repeat, black;
-    font-family: Verdana, Arial, sans-serif;
-    overflow: hidden;
-}
-
 body {
-    margin: 0;
-    font-size: .9rem;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+
+    background: url('https://i.pinimg.com/originals/3a/0b/40/3a0b40d96c53860572a1c29970ce14a8.gif') center center repeat, black;
 }
 
 main {
-    height: 90vh;
-    width: 100%;
-    box-sizing: border-box;
-    max-width: 768px;
+    max-height: 90vh;
+    max-width: 800px;
+
+    display: flex;
+    flex-direction: column;
+
     position: relative;
-    margin: auto;
-    margin-top: 5vh;
-    display: grid;
+    overflow: hidden;
+
     background: var(--gray);
     border: 2px outset;
+}
+
+#content-wrapper {
+    flex-grow: 1;
+
+    display: flex;
+    align-content: flex-start;
+
+    position: relative;
     overflow: hidden;
+
+    padding: 0.4rem;
+
+    background: var(--gray);
+
+    & > * {
+        position: relative;
+
+        border: 4px double var(--lowpink);
+        color: var(--pink);
+
+        padding: 0.4rem;
+
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
 }
 
 .two-cols {
-    grid-template-rows: 6rem 1fr;
-    grid-template-columns: 0.5fr 1fr;
-    grid-template-areas:
-        "header header"
-        "sidebar content";
-}
+    flex-direction: row-reverse;
+    gap: 0.4rem;
 
-.one-cols {
-    grid-template-rows: 6rem 1fr;
-    grid-template-areas:
-        "header"
-        "content";
-}
+    & > #sidebar {
+        width: 25%;
 
-header-bar {
-    grid-area: header;
-    display: flex;
-    flex-direction: column;
-    border-bottom: 2px groove var(--lightgray);
-}
+        background: linear-gradient(#36004ad6, #5b2143c4), url('../assets/img/bg_main.png') fixed center center;
+    }
 
-.top {
-    flex-grow: 0;
-    padding: 4px;
-    background: linear-gradient(to right, var(--purple), var(--magenta));
-    color: white;
-    border: 2px inset;
-}
-
-header-bar button, .draggable button, .btn {
-    box-sizing: border-box;
-    border-radius: 0;
-    border: 2px outset;
-    background: var(--lightgray);
-    height: fit-content;
-}
-
-.top button {
-    position: absolute;
-    right: 6px;
-}
-
-.dummy {
-    margin: 0px 4px;
-    padding: 0px 4px;
-    flex-grow: 2;
-    border-bottom: 2px groove var(--lightgray);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.address-cont {
-    display: flex;
-    align-items: center;
-    gap: .3rem;
-    max-height: 1rem;
-    position: relative;
-    width: 60%;
-}
-
-#address {
-    flex-grow: 1;
-    min-height: 1rem;
-    max-height: 1rem;
-    background: white;
-    border: 1px solid black;
-    padding: 2px;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-}
-
-#lg {
-    color: var(--gray);
-}
-
-nav {
-    margin: 4px;
-    margin-bottom: 0;
-    flex-grow: 1;
-    padding:4px;
-    padding-bottom: 0px;
-}
-
-nav a {
-    border-radius: 4px 4px 0px 0px;
-    padding: 4px;
-    background: var(--lightgray);
-    border: 2px outset white;
-    border-bottom: none !important;
-}
-
-nav a:hover, header-bar button:hover, .draggable button:hover {
-    background: var(--lilac);
-    border-style: inset;
-    border-color: var(--darklilac);
-}
-
-#sidebar {
-    grid-area: sidebar;
-    background: linear-gradient(#36004ad6, #5b2143c4), url('../graphics/spacebgupscale.png') fixed center center;
-    padding: 10px;
-    margin: 0.4rem;
-    border: 4px double var(--lowpink);
-    color: var(--pink);
-    overflow-y: auto;
+    & > #content {
+        width: 75%;
+    }
 }
 
 #content {
-    position: relative;
-    grid-area: content;
     display: flex;
     gap: 0.4rem;
     flex-wrap: wrap;
-    align-content: flex-start;
+
     background: linear-gradient(#36004ad6, #5b2143c4), url('../assets/img/bg_main.png') fixed center center;
-    padding: 0.4rem;
-    margin: 0.4rem;
-    border: 4px double var(--lowpink);
-    color: var(--pink);
-    overflow-x: hidden;
-    overflow-y: auto;
-}
-
-.about {
-    position: relative;
-    width: 100%;
-
-    a {
-        color: hotpink;
-    }
 }
 
 #pfp {
@@ -189,66 +112,24 @@ nav a:hover, header-bar button:hover, .draggable button:hover {
 
 #todo {
     padding-left: 1.5em;
-}
 
-#todo li {
-    margin-top: 1em;
-}
-
-a {
-    color: var(--purple);
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline dashed 1px;
-}
-
-.center {
-    text-align: center;
-}
-
-.left {
-    text-align: left;
-}
-
-.right {
-    text-align: right;
-}
-
-h1 {
-    font-size: 1.5rem;
-}
-
-h2 {
-    font-size: 1.2rem;
-}
-
-h3 {
-    font-size: 1rem;
-}
-
-.i {
-    font-style: italic;
-}
-
-@media(max-width: 768px) {
-    body, html {
-        overflow: auto;
+    & li {
+        margin-top: 1em;
     }
-    
-    #main {
-        margin: 0;
-        height: 100vh;
-    }
+}
 
-    .two-cols {
-        grid-template-columns: 1fr;
-        grid-template-rows: 6rem 0.7fr 0.3fr;
-        grid-template-areas: 
-            "header"
-            "content"
-            "sidebar";
+.lg {
+    color: var(--gray);
+}
+
+.black {
+    color: black;
+}
+
+@media only screen and (max-width: 800px) {
+    main {
+        width: 100vw;
+        min-width: auto;
     }
 
     #pfp {
@@ -261,50 +142,13 @@ h3 {
     }
 }
 
-/* dropdown menu */
-.dropdown {
-    position: relative;
-}
+@media only screen and (max-width: 600px) {
+    .two-cols {
+        flex-direction: column;
 
-.dropdown-select {
-    position: absolute;
-    display: flex;
-    flex-flow: column wrap;
-    right: 0;
-    z-index: 10;
-    background-color: var(--lightgray);
-    border: 2px outset;
-    box-shadow: -2px 2px 2px #876e96a2;
-    width: 125px;
-    padding: 0px 2px;
-    overflow: hidden;
-}
-
-.dropdown-select span {
-    font-size: 12px;
-    font-style: italic;
-}
-
-.dropdown-item {
-    display: block;
-    flex-grow: 1;
-    padding: 2px;
-    border: 2px solid transparent;
-    border-bottom: 1px groove var(--gray) !important;
-    font-size: 12px;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-}
-
-.dropdown-item:hover {
-    background-color: var(--lilac);
-    border: 2px inset;
-    text-decoration: none;
-}
-
-.init-hid {
-    display: none;
+        & > #content { height: 80%; width: 100%; }
+        & > #sidebar { height: 20%; width: 100%; }
+    }
 }
 
 /* BANNER + ANIMATION FOR IT */
@@ -317,40 +161,40 @@ h3 {
     overflow: hidden;
     color: white;
     font-family: 'ZCOOL QingKe HuangYou', sans-serif;
-    box-sizing: border-box;
     height: fit-content;
     width: 100%;
+    
+    & h1 {
+        font-size: 330%;
+        margin: -7px;
+        white-space: nowrap;
+    }
   }
-  
-  .banner h1 {
-    font-size: 330%;
-    margin: -7px;
-    white-space: nowrap;
-  }
-  
-  #scroll-text {
+
+#scroll-text {
     -moz-transform: translateX(100%);
     -webkit-transform: translateX(100%);
     transform: translateX(100%);
     
-    -moz-animation: my-animation 15s linear infinite;
-    -webkit-animation: my-animation 15s linear infinite;
-    animation: my-animation 15s linear infinite;
+    -moz-animation: banner-scroll 15s linear infinite;
+    -webkit-animation: banner-scroll 15s linear infinite;
+    animation: banner-scroll 15s linear infinite;
     
     width: fit-content;
-  }
-  
-  @keyframes my-animation {
+}
+
+
+@keyframes banner-scroll {
     from { transform: translateX(100%); }
     to { transform: translateX(-100%); }
-  }
+}
 
-  @-moz-keyframes my-animation {
+@-moz-keyframes banner-scroll {
     from { -moz-transform: translateX(100%); }
     to { -moz-transform: translateX(-100%); }
-  }
-  
-  @-webkit-keyframes my-animation {
+}
+
+@-webkit-keyframes banner-scroll {
     from { -webkit-transform: translateX(100%); }
     to { -webkit-transform: translateX(-100%); }
-  }
+}
