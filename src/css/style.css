@@ -14,12 +14,16 @@ main css page! this is used for all the central pages on the site.
     --lilac: #a392ac;
     --darklilac: #876e96;
 
-    font-size: 15px;
+    --hotpink: #d81fcc;
+    --peach: #ff898b;
+
+    font-size: 14px;
     font-family: Verdana, Arial, sans-serif;
 }
 
 *, *:after, *:before {
     box-sizing: border-box;
+    position: relative;
 
     scrollbar-color: var(--pink) var(--purple);
     scrollbar-width: thin;
@@ -28,8 +32,9 @@ main css page! this is used for all the central pages on the site.
 body {
     height: 100vh;
     width: 100vw;
-    display: flex;
+    margin: 0;
 
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -40,13 +45,12 @@ body {
 }
 
 main {
-    max-height: 90vh;
+    height: 90vh;
     max-width: 800px;
 
     display: flex;
     flex-direction: column;
 
-    position: relative;
     overflow: hidden;
 
     background: var(--gray);
@@ -59,7 +63,6 @@ main {
     display: flex;
     align-content: flex-start;
 
-    position: relative;
     overflow: hidden;
 
     padding: 0.4rem;
@@ -67,8 +70,6 @@ main {
     background: var(--gray);
 
     & > * {
-        position: relative;
-
         border: 4px double var(--lowpink);
         color: var(--pink);
 
@@ -76,6 +77,18 @@ main {
 
         overflow-x: hidden;
         overflow-y: auto;
+    }
+
+    & a {
+        color: var(--hotpink);
+
+        &:hover {
+            color: var(--peach);
+        }
+    }
+
+    & hr {
+        border-color: var(--lowpink);
     }
 }
 
@@ -97,33 +110,75 @@ main {
 #content {
     display: flex;
     gap: 0.4rem;
-    flex-wrap: wrap;
+    flex-direction: column;
 
     background: linear-gradient(#36004ad6, #5b2143c4), url('../assets/img/bg_main.png') fixed center center;
-}
 
-#pfp {
-    display: block;
-    margin: 0 0 0.4rem 0.4rem;
-    border: 1px solid var(--lowpink);
-    max-width: 250px;
-    float: right;
-}
-
-#todo {
-    padding-left: 1.5em;
-
-    & li {
-        margin-top: 1em;
+    #pfp {
+        display: block;
+        margin: 0 0 0.4rem 0.4rem;
+        border: 1px solid var(--lowpink);
+        max-width: 250px;
+        float: right;
     }
 }
 
-.lg {
-    color: var(--gray);
-}
+.tip {
+    width: 100%;
+    margin: 0.4rem auto;
 
-.black {
-    color: black;
+    background: var(--lowpink);
+    border: 3px double var(--pink);
+    border-radius:2px;
+
+    color: var(--purple);
+
+    padding: 0.4rem;
+
+
+    & p {
+        margin: 0.4rem 1rem;
+
+        font-size: 12px;
+        text-indent: 5em;
+        
+
+        &:first-of-type {
+            
+            font-size: 14px;
+            text-indent: 0;
+            
+            &:before {
+                content: 'psst!';
+                margin-right: 0.5em;
+
+                rotate: -10deg;
+                display: inline-block;
+                width: fit-content;
+
+                color: var(--hotpink);
+                font-weight: bold;
+                font-style: italic;
+                font-size: 1.2em;
+                text-decoration: underline;
+                text-shadow: 1px 1px var(--purple), -1px -1px var(--purple), 1px -1px var(--purple), -1px 1px var(--purple);
+            }
+        }    
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: 0;
+
+        width: 56px;
+        height: 56px;
+
+        background: url('../assets/img/tail_tip.png') center;
+
+        padding: 0.4rem;
+    }
 }
 
 @media only screen and (max-width: 800px) {
@@ -161,11 +216,11 @@ main {
     overflow: hidden;
     color: white;
     font-family: 'ZCOOL QingKe HuangYou', sans-serif;
-    height: fit-content;
+    min-height: 4rem;
     width: 100%;
     
     & h1 {
-        font-size: 330%;
+        font-size: 3rem;
         margin: -7px;
         white-space: nowrap;
     }

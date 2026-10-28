@@ -22,6 +22,6 @@ h3 {
     font-size: 1rem;
 }
 
-.i {
-    font-style: italic;
+.outlined {
+    text-shadow: 1px 1px black, -1px -1px black, 1px -1px black, -1px 1px black;
 }

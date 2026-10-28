@@ -1,3 +1,11 @@
+.lg {
+    color: var(--gray);
+}
+
+.black {
+    color: black;
+}
+
 /* draggable divs */
 
 .draggable {
@@ -21,6 +29,14 @@
     .draggable-body {
         border: 2px inset;
         margin: 1px;
+    }
+}
+
+#todo {
+    padding-left: 1.5em;
+
+    & li {
+        margin-top: 1em;
     }
 }
 
@@ -67,7 +83,6 @@ header {
             display: flex;
             align-items: center;
             gap: .3rem;
-            position: relative;
             width: 60%;
         }
 
@@ -88,8 +103,6 @@ header {
 
     /* dropdown menu */
     .dropdown {
-        position: relative;
-
         .dropdown-select {
             position: absolute;
             display: flex;
