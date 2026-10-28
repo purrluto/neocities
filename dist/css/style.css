@@ -30,6 +30,7 @@ main css page! this is used for all the central pages on the site.
     --lilac: #a392ac;
     --darklilac: #876e96;
 
+    --pinker: #f8a6f7;
     --hotpink: #d81fcc;
     --peach: #ff898b;
 
@@ -62,7 +63,7 @@ body {
 
 main {
     height: 90vh;
-    max-width: 800px;
+    width: 800px;
 
     display: flex;
     flex-direction: column;
@@ -124,6 +125,8 @@ main {
 }
 
 #content {
+    flex-grow: 1;
+    
     display: flex;
     gap: 0.4rem;
     flex-direction: column;
@@ -138,6 +141,23 @@ main {
         max-width: 50%;
         float: right;
     }
+
+    a {
+        display: inline-block;
+
+        color: var(--peach);
+        transition: all .5s;
+
+        text-shadow: 1px 1px var(--purple), -1px -1px var(--purple), 1px -1px var(--purple), -1px 1px var(--purple);
+        
+
+        &:hover {
+            color: var(--hotpink);
+
+            animation: bounce 0.75s linear infinite alternate;
+            transition: all 0.5s;      
+        }
+    }
 }
 
 .tip {
@@ -148,21 +168,23 @@ main {
     border: 3px double var(--pink);
     border-radius:2px;
 
-    color: var(--purple);
-
     padding: 0.4rem 5rem;
 
 
     & p {
         font-size: 12px;
-        
+
+        margin: 0.25rem;
+
+        color: var(--purple);
 
         &:first-of-type {
             
             font-size: 14px;
             
             &:before {
-                content: 'psst!';
+                content: 'psst!\A fyi...';
+                white-space: pre-wrap;
 
                 rotate: -10deg;
                 display: inline-block;
@@ -196,6 +218,13 @@ main {
 
         padding: 0.4rem;
     }
+}
+
+.text {
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    text-wrap: pretty;
 }
 
 h1, h2 {
@@ -239,12 +268,12 @@ a[disabled] {
     border: 3px double #0e0549;
     text-align: center;
     overflow: hidden;
-    color: white;
     min-height: 4rem;
     width: 100%;
     
     & h1 {
         font-family: 'ZCOOL QingKe HuangYou', sans-serif;
+        color: white;
         font-size: 3rem;
         margin: -7px;
         white-space: nowrap;
@@ -281,4 +310,9 @@ a[disabled] {
 @-webkit-keyframes banner-scroll {
     from { -webkit-transform: translateX(100%); }
     to { -webkit-transform: translateX(-100%); }
+}
+
+@keyframes bounce {
+    0% { transform: translateY(0rem); }
+    100% { transform: translateY(-0.25rem); }
 }
