@@ -11,17 +11,28 @@
 }
 
 h1 {
-    font-size: 1.5rem;
+    font-size: calc(0.8rem + 0.7vw);
+
+    &::before {
+        content: '\2605  \2014  ';
+    }
+    &::after {
+        content: '  \2014';
+    }
 }
 
 h2 {
-    font-size: 1.2rem;
+    font-size: calc(0.5rem + 0.7vw);
 }
 
 h3 {
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 
 .outlined {
     text-shadow: 1px 1px black, -1px -1px black, 1px -1px black, -1px 1px black;
+}
+
+s {
+    text-decoration-thickness: 3px;
 }

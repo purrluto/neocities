@@ -4,6 +4,22 @@ main css page! this is used for all the central pages on the site.
 
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=ZCOOL+QingKe+HuangYou&display=swap');
 
+@font-face {
+    font-family: Wibbled;
+    src: url(../assets/font/Wibbled.ttf);
+}
+
+@font-face {
+    font-family: 'Undead Pixel';
+    src: url("../assets/font/Undead Pixel 8.ttf");
+}
+
+@font-face {
+    font-family: 'Old Peculiar';
+    src: url("../assets/font/Not Jam Mono Old Peculiar 8.ttf");
+}
+
+
 :root {
     --purple: #36004A;
     --magenta: #5B2143;
@@ -18,7 +34,7 @@ main css page! this is used for all the central pages on the site.
     --peach: #ff898b;
 
     font-size: 14px;
-    font-family: Verdana, Arial, sans-serif;
+    font-family: 'Undead Pixel', Verdana, Arial, sans-serif;
 }
 
 *, *:after, *:before {
@@ -118,7 +134,8 @@ main {
         display: block;
         margin: 0 0 0.4rem 0.4rem;
         border: 1px solid var(--lowpink);
-        max-width: 250px;
+        width: 250px;
+        max-width: 50%;
         float: right;
     }
 }
@@ -133,28 +150,28 @@ main {
 
     color: var(--purple);
 
-    padding: 0.4rem;
+    padding: 0.4rem 5rem;
 
 
     & p {
-        margin: 0.4rem 1rem;
-
         font-size: 12px;
-        text-indent: 5em;
         
 
         &:first-of-type {
             
             font-size: 14px;
-            text-indent: 0;
             
             &:before {
                 content: 'psst!';
-                margin-right: 0.5em;
 
                 rotate: -10deg;
                 display: inline-block;
                 width: fit-content;
+
+                position: absolute;
+                left: -4rem;
+                top: 0.4rem;
+
 
                 color: var(--hotpink);
                 font-weight: bold;
@@ -179,6 +196,14 @@ main {
 
         padding: 0.4rem;
     }
+}
+
+h1, h2 {
+    font-family: 'Old Peculiar';
+}
+
+a[disabled] {
+    pointer-events: none;
 }
 
 @media only screen and (max-width: 800px) {
@@ -215,14 +240,18 @@ main {
     text-align: center;
     overflow: hidden;
     color: white;
-    font-family: 'ZCOOL QingKe HuangYou', sans-serif;
     min-height: 4rem;
     width: 100%;
     
     & h1 {
+        font-family: 'ZCOOL QingKe HuangYou', sans-serif;
         font-size: 3rem;
         margin: -7px;
         white-space: nowrap;
+
+        &::before, &::after {
+            content: "";
+        }
     }
   }
 

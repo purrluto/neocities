@@ -61,8 +61,12 @@ header button, .draggable button, .btn {
 
 nav a:hover, header button:hover, .draggable button:hover {
     background: var(--lilac);
-    border-style: inset;
+    border-color: var(--lilac);
+}
+nav a:active, header button:active, .draggable button:active {
+    color: darkred;
     border-color: var(--darklilac);
+    border-style: inset;
 }
 
 header {
@@ -112,13 +116,17 @@ header {
             background-color: var(--lightgray);
             border: 2px outset;
             box-shadow: -2px 2px 2px #876e96a2;
-            width: 125px;
+            width: 200px;
             padding: 0px 2px;
             overflow: hidden;
 
             & span {
                 font-size: 12px;
                 font-style: italic;
+            }
+
+            & a {
+                text-decoration: none;
             }
         }
 
@@ -161,7 +169,7 @@ header {
             text-decoration: none;
 
             &:hover {
-                text-decoration: underline dashed 1px;
+                text-decoration: underline dashed 2px;
             }}
     }
 }
