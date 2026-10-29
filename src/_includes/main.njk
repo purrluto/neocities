@@ -15,22 +15,22 @@
         <script src="/scripts/main.js"></script>
     </head>
     <body>
-        <!-- for optional elements -->
+        <!-- for optional elements. top, btm, rt, lft, width, height, header -->
         {% if showChat %}
-            {% call module.draggable('auto', '10vh', '10%', 'auto', '300px', 'fit-content', '★ talk to me? ★') %}
+            {% call module.draggable('auto', '0', '1vw', 'auto', '300px', 'fit-content', '★ talk to me? ★') %}
                 <iframe src="https://www3.cbox.ws/box/?boxid=3538579&boxtag=TYc6FR" width="100%" height="450" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>
             {%- endcall %}
         {% endif %}
 
         {% if showChangeToDo %}
-            {% call module.draggable('3vh', 'auto', 'auto', '10%', '300px', 'fit-content', '★ !! TODO !! ★') %}
+            {% call module.draggable('auto', '0', 'auto', 'calc(2vw + 300px)', '300px', '250px', '★ !! TODO !! ★') %}
                 <ul id="todo" style="font-size: 10px;">
                     {% for item in todolist %}
                         <li>{% if item.complete %}<strike>{% endif %}{{item.desc}}{% if item.complete %}</strike>{% endif %}</li>
                     {% endfor %}
                 </ul>
             {%- endcall %}
-            {% call module.draggable('auto', '3vh', 'auto', '10%', '300px', 'fit-content', "★ !! CHANGELOG !! ★") %}
+            {% call module.draggable('auto', '0', 'auto', '1vw', '300px', '400px', "★ !! CHANGELOG !! ★") %}
             <ul id="todo" style="font-size: 10px;">
                 {% for change in changelog %}
                     <li>{{change.date}}: {{change.desc}}</li>
