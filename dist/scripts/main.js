@@ -31,4 +31,11 @@ $( function() {
     $( "span#link" ).html(
         window.location.pathname
     );
+
+    // hide all chats/etc
+    $( ".hide-all ").click(
+        function(){
+            $( ".nodisplay" ).toggle();
+        }
+    );
 } );
