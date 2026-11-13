@@ -28,67 +28,7 @@
                 <p>{{summary}}</p>
             </header>
             <article id="class-info">
-                {% for section, subsect in homebrew.bladesavant %}
-                {% if section == "table" or section == "classtable" %}
-                    <table id="class-table-5e">
-                    <caption>
-                        <h3>{{ brewname }} Class Table</h3>
-                    </caption>
-                    <tbody>
-                        {% set tableLength = subsect[0].length %}
-                        {% set offset = 0 %}
-                        {% for row in subsect %}
-                            <tr>
-                                {% if loop.first %}
-                                {% for col in row %}
-                                    <th>{{ col }}</th>
-                                {% endfor %}
-                                {% else %}
-                                {% if section == "classtable" %}
-                                <td>{{ loop.index0 }}{% if loop.index0 == 1 %}st{% elif loop.index0 == 2 %}nd{% elif loop.index0 == 3 %}rd{% else %}th{% endif %}</td>
-                                <td>+{{ loop.index0//4 + 1 if loop.index0 % 4 == 0 else loop.index0 // 4 + 2 }}</td>
-                                {% set offset = 2 %}
-                                {% endif %}
-                                {% set freeSpace = tableLength - row.length - offset %}
-                                {{ freeSpace }}
-                                {% for col in range(0, row.length + freeSpace) %}
-                                    <td>{{ row[col] if row[col] else "&#8212;" | safe }}</td>
-                                {% endfor %}
-                                {% endif %}
-                            </tr>
-                        {% endfor %}
-                    </tbody>
-                </table>
-                {% else %}
-                <section id="{{ section }}">
-                    {% for part in subsect %}
-
-                        <section id="{{ part.name if (part.header == 3) and (section == "subclasses") }}">
-                        {% if (part.header == 3) and (section == "subclasses") %}<section>{% endif %}
-                        {% if part.name %}
-                            <{{ "h" + part.header }}>{{ part.name }}</{{ "h" + part.header }}> 
-                        {% endif %}
-                        {% if part.desc %}
-                        {% for para in part.desc %}
-                            <p>{{ para }}</p>
-                        {% endfor %}
-                        {% endif %}
-                        {% if part.list %}
-                        <ul class="{{ "list-5e" if part.labelled else "" }}">
-                            {% for label, item in part.list %}
-                            <li>{% if part.labelled %}<mark>{{ label }} </mark>{% endif %}{{ item }}</li>
-                            {% endfor %}
-                        </ul>
-                        {% endif %}
-                        {% if part.descfoot %}{% for para in part.descfoot %}
-                            <p>{{ para }}</p>
-                        {% endfor  %}{% endif %}
-                        </section>
-                        {% if (part.header == 4) and (subsect[loop.index].header == 3) and (section == "subclasses") or (loop.last and (section == "subclasses")) %}</section>{% endif %}
-                    {% endfor %}
-                </section>
-                {% endif %}
-                {% endfor %}
+                {{ content | safe }}
             </article>
         </main>
     </div>
