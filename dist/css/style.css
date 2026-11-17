@@ -31,6 +31,7 @@ main css page! this is used for all the central pages on the site.
     --darklilac: #876e96;
 
     --pinker: #f8a6f7;
+    --pinkest: #f185f0;
     --hotpink: #d81fcc;
     --peach: #ff898b;
 
@@ -63,7 +64,7 @@ body {
 
 main {
     height: 90vh;
-    width: 800px;
+    width: 1000px;
 
     display: flex;
     flex-direction: column;
@@ -235,15 +236,10 @@ a[disabled] {
     pointer-events: none;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1000px) {
     main {
         width: 100vw;
         min-width: auto;
-    }
-
-    #pfp {
-        float: none;
-        margin: auto;
     }
 
     .nodisplay {

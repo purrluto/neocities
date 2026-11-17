@@ -29,6 +29,7 @@
     .draggable-body {
         border: 2px inset;
         margin: 1px;
+        height: 100%;
     }
 }
 
