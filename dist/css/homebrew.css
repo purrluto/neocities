@@ -258,19 +258,16 @@ ul.list-5e mark, #multiclass mark {
 
 @media only screen and (max-width: 480px) {
     #class-info {
-        display: grid;
-        grid-template-areas: 
-            "intro"
-            "table"
-            "info";
+        display: flex;
+        flex-direction: column;
     }
 
     section#intro {
-        grid-area: intro;
+        order: 1;
     }
 
     table#class-table-5e {
-        grid-area: table;
+        order: 2;
         max-width: 100%;
     }
 
@@ -279,6 +276,6 @@ ul.list-5e mark, #multiclass mark {
     }
 
     #class-info > section:not(#intro) {
-        grid-area: info;
+        order: 2;
     }
 }
