@@ -22,7 +22,6 @@
                                 {% set offset = 2 %}
                                 {% endif %}
                                 {% set freeSpace = tableLength - row.length - offset %}
-                                {{ freeSpace }}
                                 {% for col in range(0, row.length + freeSpace) %}
                                     <td>{{ row[col] if row[col] else "&#8212;" | safe }}</td>
                                 {% endfor %}
