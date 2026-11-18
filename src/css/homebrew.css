@@ -117,9 +117,15 @@ main {
     margin: 0.5rem;
 }
 
-header {
+header, th {
     text-align: center;
     background-color: rgba(var(--accent-bg), 1);
+    color: rgba(var(--header-font));
+    font-variant: small-caps;
+}
+
+header {
+    padding: .5rem;
 }
 
 nav {
@@ -183,14 +189,9 @@ table tbody::after {
     border-top: 1px solid rgba(var(--accent-bg));
 }
 
-header, th, h2, h3, h4 {
+h2, h3, h4 {
     font-variant: small-caps;
     color: rgba(var(--accent-font), 1);
-}
-
-header {
-    color: rgba(var(--header-font));
-    padding: .5rem;
 }
 
 .subtitled > h1 {
@@ -258,19 +259,16 @@ ul.list-5e mark, #multiclass mark {
 
 @media only screen and (max-width: 480px) {
     #class-info {
-        display: grid;
-        grid-template-areas: 
-            "intro"
-            "table"
-            "info";
+        display: flex;
+        flex-direction: column;
     }
 
     section#intro {
-        grid-area: intro;
+        order: 1;
     }
 
     table#class-table-5e {
-        grid-area: table;
+        order: 2;
         max-width: 100%;
     }
 
@@ -279,6 +277,6 @@ ul.list-5e mark, #multiclass mark {
     }
 
     #class-info > section:not(#intro) {
-        grid-area: info;
+        order: 2;
     }
 }
